@@ -1,0 +1,12 @@
+body{margin:0;font-family:Arial,sans-serif;background:#0b0b0b;color:#fff;direction:rtl}
+header{text-align:center;padding:24px;background:#111;border-bottom:2px solid #D4AF37}
+.logo{font-size:42px;font-weight:bold}.logo span{color:#D4AF37}
+.slogan{color:#bbb}
+.hero{text-align:center;padding:60px 20px;background:linear-gradient(180deg,#1a1a1a,#0b0b0b)}
+.hero h1{font-size:32px}.hero p{color:#ddd}
+button{background:#D4AF37;color:#111;border:none;padding:12px 22px;border-radius:10px;font-weight:bold}
+section{padding:24px}
+h2{color:#D4AF37}
+#categoryList,#featuredFoods{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:14px;padding:16px}
+footer{text-align:center;padding:20px;color:#999;border-top:1px solid #333}
