@@ -12,8 +12,9 @@
 <body>
   <main class="page">
     <section class="hero">
-      <div class="glow glow-a"></div>
-      <div class="glow glow-b"></div>
+      <div class="noise"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
 
       <header class="brand">
         <span class="badge">فست فود</span>
@@ -22,72 +23,72 @@
       </header>
 
       <div class="hero-grid">
-        <div class="hero-side">
-          <div class="glass-card qr-card">
+        <aside class="side left">
+          <div class="glass qr-box">
             <div class="qr">QR</div>
             <div class="qr-text">@MA2TA.TBZ</div>
           </div>
 
-          <div class="glass-card info-card">
+          <div class="glass phone-box">
             <div>☎ ۲۲۳۰۰۸۸۸</div>
             <div>☎ ۲۲۲۳۱۴۵۶</div>
           </div>
-        </div>
+        </aside>
 
-        <div class="hero-main">
-          <div class="title-box">
+        <section class="center">
+          <div class="title-card">
             <span>فست فود</span>
             <strong>مادوتا</strong>
           </div>
 
           <img
             class="hero-img"
-            src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=1400&q=80"
+            src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=1500&q=80"
             alt="burger"
           />
 
-          <div class="hero-strip">
+          <div class="hero-footer">
             <span>MA2TA.TBZ</span>
             <span>Snapp! Food</span>
           </div>
-        </div>
+        </section>
 
-        <div class="hero-side hero-side-right">
-          <div class="glass-card promo-card">
+        <aside class="side right">
+          <div class="glass promo-box">
             <div class="promo-title">منوی دیجیتال</div>
             <div class="promo-sub">فقط مشاهده منو</div>
           </div>
 
-          <div class="glass-card note-card">
+          <div class="glass feature-box">
             <div>طراحی لوکس</div>
-            <div>نمایش سریع</div>
+            <div>انیمیشن زنده</div>
             <div>مخصوص موبایل</div>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <section class="tabs">
+    <nav class="tabs">
       <button class="tab active" data-target="burger">برگر</button>
       <button class="tab" data-target="pizza">پیتزا</button>
       <button class="tab" data-target="fried">سوخاری</button>
       <button class="tab" data-target="pasta">پاستا / غذا</button>
       <button class="tab" data-target="salad">سالاد</button>
       <button class="tab" data-target="drink">نوشیدنی</button>
-    </section>
+    </nav>
 
     <section class="category active" id="burger">
       <div class="section-head">
         <h2>برگر</h2>
         <span>Popular picks</span>
       </div>
-      <div class="items">
-        <article class="item"><span class="price">۴۱۹</span><div><h3>شِف برگر</h3><p>برگر + پنیر + سس مخصوص + سیب‌زمینی</p></div></article>
-        <article class="item"><span class="price">۳۹۹</span><div><h3>سوپر یک‌جاپد</h3><p>برگر + پنیر + قارچ + بیکن + سس</p></div></article>
-        <article class="item"><span class="price">۳۱۹</span><div><h3>یک‌مک برگر</h3><p>دو لایه گوشت + پنیر + خیارشور</p></div></article>
-        <article class="item"><span class="price">۲۹۹</span><div><h3>میکس برگر</h3><p>ترکیب گوشت و مرغ با سس مخصوص</p></div></article>
-        <article class="item"><span class="price">۲۷۹</span><div><h3>دوبل برگر</h3><p>دو لایه گوشت + پنیر + سس</p></div></article>
-        <article class="item"><span class="price">۲۵۹</span><div><h3>چیز برگر</h3><p>برگر + پنیر + گوجه + خیارشور</p></div></article>
+      <div class="cards">
+        <article class="food-card tilt"><span class="price">۴۱۹</span><h3>شِف برگر</h3><p>برگر + پنیر + سس مخصوص + سیب‌زمینی</p></article>
+        <article class="food-card tilt"><span class="price">۳۹۹</span><h3>سوپر یک‌جاپد</h3><p>برگر + پنیر + قارچ + بیکن + سس</p></article>
+        <article class="food-card tilt"><span class="price">۳۱۹</span><h3>یک‌مک برگر</h3><p>دو لایه گوشت + پنیر + خیارشور</p></article>
+        <article class="food-card tilt"><span class="price">۲۹۹</span><h3>میکس برگر</h3><p>ترکیب گوشت و مرغ با سس مخصوص</p></article>
+        <article class="food-card tilt"><span class="price">۲۷۹</span><h3>دوبل برگر</h3><p>دو لایه گوشت + پنیر + سس</p></article>
+        <article class="food-card tilt"><span class="price">۲۵۹</span><h3>چیز برگر</h3><p>برگر + پنیر + گوجه + خیارشور</p></article>
       </div>
     </section>
 
@@ -96,12 +97,12 @@
         <h2>پیتزا</h2>
         <span>Fresh & hot</span>
       </div>
-      <div class="items">
-        <article class="item"><span class="price">۵۱۹</span><div><h3>پیتزا مخصوص مادوتا</h3><p>گوشت، قارچ، پنیر، سس مخصوص</p></div></article>
-        <article class="item"><span class="price">۴۵۹</span><div><h3>پیتزا رست بیف</h3><p>رست بیف، پنیر، سس مخصوص</p></div></article>
-        <article class="item"><span class="price">۳۹۹</span><div><h3>پیتزا پپرونی</h3><p>پپرونی، پنیر، سس مخصوص</p></div></article>
-        <article class="item"><span class="price">۳۹۹</span><div><h3>پیتزا سبزیجات</h3><p>فلفل دلمه، قارچ، زیتون، پنیر</p></div></article>
-        <article class="item"><span class="price">۴۱۹</span><div><h3>پیتزا آلفردو</h3><p>مرغ، سس آلفردو، قارچ، پنیر</p></div></article>
+      <div class="cards">
+        <article class="food-card tilt"><span class="price">۵۱۹</span><h3>پیتزا مخصوص مادوتا</h3><p>گوشت، قارچ، پنیر، سس مخصوص</p></article>
+        <article class="food-card tilt"><span class="price">۴۵۹</span><h3>پیتزا رست بیف</h3><p>رست بیف، پنیر، سس مخصوص</p></article>
+        <article class="food-card tilt"><span class="price">۳۹۹</span><h3>پیتزا پپرونی</h3><p>پپرونی، پنیر، سس مخصوص</p></article>
+        <article class="food-card tilt"><span class="price">۳۹۹</span><h3>پیتزا سبزیجات</h3><p>فلفل دلمه، قارچ، زیتون، پنیر</p></article>
+        <article class="food-card tilt"><span class="price">۴۱۹</span><h3>پیتزا آلفردو</h3><p>مرغ، سس آلفردو، قارچ، پنیر</p></article>
       </div>
     </section>
 
@@ -110,11 +111,11 @@
         <h2>سوخاری</h2>
         <span>Crispy menu</span>
       </div>
-      <div class="items">
-        <article class="item"><span class="price">۶۲۰</span><div><h3>فیله سوخاری</h3><p>فیله + سس + سیب‌زمینی</p></div></article>
-        <article class="item"><span class="price">۶۰۰</span><div><h3>توپک سوخاری</h3><p>مرغ سوخاری + سس مخصوص</p></div></article>
-        <article class="item"><span class="price">۵۵۰</span><div><h3>قارچ سوخاری</h3><p>قارچ سوخاری + سس</p></div></article>
-        <article class="item"><span class="price">۵۴۵</span><div><h3>بال و کتف</h3><p>بال سوخاری + سس تند</p></div></article>
+      <div class="cards">
+        <article class="food-card tilt"><span class="price">۶۲۰</span><h3>فیله سوخاری</h3><p>فیله + سس + سیب‌زمینی</p></article>
+        <article class="food-card tilt"><span class="price">۶۰۰</span><h3>توپک سوخاری</h3><p>مرغ سوخاری + سس مخصوص</p></article>
+        <article class="food-card tilt"><span class="price">۵۵۰</span><h3>قارچ سوخاری</h3><p>قارچ سوخاری + سس</p></article>
+        <article class="food-card tilt"><span class="price">۵۴۵</span><h3>بال و کتف</h3><p>بال سوخاری + سس تند</p></article>
       </div>
     </section>
 
@@ -123,11 +124,11 @@
         <h2>پاستا / غذا</h2>
         <span>Chef specials</span>
       </div>
-      <div class="items">
-        <article class="item"><span class="price">۲۹۰</span><div><h3>پاستا پنه چیکن</h3><p>مرغ، خامه، قارچ، پنیر</p></div></article>
-        <article class="item"><span class="price">۳۵۰</span><div><h3>پاستا پنه مادوتا</h3><p>مرغ، سس مخصوص، پنیر</p></div></article>
-        <article class="item"><span class="price">۲۹۰</span><div><h3>پاستا پنه مرغ</h3><p>پنه + مرغ + خامه + پنیر</p></div></article>
-        <article class="item"><span class="price">۲۵۰</span><div><h3>سالاد سزار</h3><p>کاهو، مرغ، پنیر، سس سزار</p></div></article>
+      <div class="cards">
+        <article class="food-card tilt"><span class="price">۲۹۰</span><h3>پاستا پنه چیکن</h3><p>مرغ، خامه، قارچ، پنیر</p></article>
+        <article class="food-card tilt"><span class="price">۳۵۰</span><h3>پاستا پنه مادوتا</h3><p>مرغ، سس مخصوص، پنیر</p></article>
+        <article class="food-card tilt"><span class="price">۲۹۰</span><h3>پاستا پنه مرغ</h3><p>پنه + مرغ + خامه + پنیر</p></article>
+        <article class="food-card tilt"><span class="price">۲۵۰</span><h3>سالاد سزار</h3><p>کاهو، مرغ، پنیر، سس سزار</p></article>
       </div>
     </section>
 
@@ -136,9 +137,9 @@
         <h2>سالاد</h2>
         <span>Fresh bowls</span>
       </div>
-      <div class="items">
-        <article class="item"><span class="price">۲۵۰</span><div><h3>سالاد سزار</h3><p>کاهو، مرغ، پنیر، سس سزار</p></div></article>
-        <article class="item"><span class="price">۲۳۰</span><div><h3>سالاد فصل</h3><p>سبزیجات تازه و سس مخصوص</p></div></article>
+      <div class="cards">
+        <article class="food-card tilt"><span class="price">۲۵۰</span><h3>سالاد سزار</h3><p>کاهو، مرغ، پنیر، سس سزار</p></article>
+        <article class="food-card tilt"><span class="price">۲۳۰</span><h3>سالاد فصل</h3><p>سبزیجات تازه و سس مخصوص</p></article>
       </div>
     </section>
 
@@ -147,9 +148,9 @@
         <h2>نوشیدنی</h2>
         <span>Cold drinks</span>
       </div>
-      <div class="items">
-        <article class="item"><span class="price">۴۵</span><div><h3>نوشابه</h3><p>قوطی یا بطری</p></div></article>
-        <article class="item"><span class="price">۵۵</span><div><h3>آب معدنی</h3><p>بطری سرد</p></div></article>
+      <div class="cards">
+        <article class="food-card tilt"><span class="price">۴۵</span><h3>نوشابه</h3><p>قوطی یا بطری</p></article>
+        <article class="food-card tilt"><span class="price">۵۵</span><h3>آب معدنی</h3><p>بطری سرد</p></article>
       </div>
     </section>
   </main>
@@ -161,14 +162,27 @@
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const target = tab.dataset.target;
-
         tabs.forEach(t => t.classList.remove('active'));
         categories.forEach(c => c.classList.remove('active'));
-
         tab.classList.add('active');
         const section = document.getElementById(target);
         section.classList.add('active');
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    const tiltCards = document.querySelectorAll('.tilt');
+    tiltCards.forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = e.clientX - r.left;
+        const y = e.clientY - r.top;
+        const rx = ((y - r.height / 2) / r.height) * -10;
+        const ry = ((x - r.width / 2) / r.width) * 10;
+        card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px) scale(1.03)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateX(0) rotateY(0) translateY(0) scale(1)';
       });
     });
   </script>
