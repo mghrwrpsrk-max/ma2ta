@@ -10,41 +10,60 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="poster">
-    <header class="top-banner">
-      <div class="brand-badge">فست فود</div>
-      <h1>مادوتا</h1>
-      <p>MA2TA.TBZ</p>
-    </header>
-
+  <main class="page">
     <section class="hero">
-      <div class="hero-left">
-        <div class="mini-card qr-card">
-          <div class="qr">QR</div>
-          <div class="qr-text">@MA2TA.TBZ</div>
+      <div class="glow glow-a"></div>
+      <div class="glow glow-b"></div>
+
+      <header class="brand">
+        <span class="badge">فست فود</span>
+        <h1>مادوتا</h1>
+        <p>MA2TA.TBZ</p>
+      </header>
+
+      <div class="hero-grid">
+        <div class="hero-side">
+          <div class="glass-card qr-card">
+            <div class="qr">QR</div>
+            <div class="qr-text">@MA2TA.TBZ</div>
+          </div>
+
+          <div class="glass-card info-card">
+            <div>☎ ۲۲۳۰۰۸۸۸</div>
+            <div>☎ ۲۲۲۳۱۴۵۶</div>
+          </div>
         </div>
 
-        <div class="mini-card phone-card">
-          <div class="phone">☎ ۲۲۳۰۰۸۸۸</div>
-          <div class="phone">☎ ۲۲۲۳۱۴۵۶</div>
-        </div>
-      </div>
+        <div class="hero-main">
+          <div class="title-box">
+            <span>فست فود</span>
+            <strong>مادوتا</strong>
+          </div>
 
-      <div class="hero-center">
-        <div class="title-card">
-          <div class="title-small">فست فود</div>
-          <div class="title-big">مادوتا</div>
-        </div>
-        <img
-          class="hero-image"
-          src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=1200&q=80"
-          alt="burger"
-        />
-      </div>
+          <img
+            class="hero-img"
+            src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=1400&q=80"
+            alt="burger"
+          />
 
-      <div class="hero-right">
-        <div class="promo">Snapp! Food</div>
-        <div class="brand-id">MA2TA.TBZ</div>
+          <div class="hero-strip">
+            <span>MA2TA.TBZ</span>
+            <span>Snapp! Food</span>
+          </div>
+        </div>
+
+        <div class="hero-side hero-side-right">
+          <div class="glass-card promo-card">
+            <div class="promo-title">منوی دیجیتال</div>
+            <div class="promo-sub">فقط مشاهده منو</div>
+          </div>
+
+          <div class="glass-card note-card">
+            <div>طراحی لوکس</div>
+            <div>نمایش سریع</div>
+            <div>مخصوص موبایل</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -58,7 +77,10 @@
     </section>
 
     <section class="category active" id="burger">
-      <h2>برگر</h2>
+      <div class="section-head">
+        <h2>برگر</h2>
+        <span>Popular picks</span>
+      </div>
       <div class="items">
         <article class="item"><span class="price">۴۱۹</span><div><h3>شِف برگر</h3><p>برگر + پنیر + سس مخصوص + سیب‌زمینی</p></div></article>
         <article class="item"><span class="price">۳۹۹</span><div><h3>سوپر یک‌جاپد</h3><p>برگر + پنیر + قارچ + بیکن + سس</p></div></article>
@@ -70,7 +92,10 @@
     </section>
 
     <section class="category" id="pizza">
-      <h2>پیتزا</h2>
+      <div class="section-head">
+        <h2>پیتزا</h2>
+        <span>Fresh & hot</span>
+      </div>
       <div class="items">
         <article class="item"><span class="price">۵۱۹</span><div><h3>پیتزا مخصوص مادوتا</h3><p>گوشت، قارچ، پنیر، سس مخصوص</p></div></article>
         <article class="item"><span class="price">۴۵۹</span><div><h3>پیتزا رست بیف</h3><p>رست بیف، پنیر، سس مخصوص</p></div></article>
@@ -81,7 +106,10 @@
     </section>
 
     <section class="category" id="fried">
-      <h2>سوخاری</h2>
+      <div class="section-head">
+        <h2>سوخاری</h2>
+        <span>Crispy menu</span>
+      </div>
       <div class="items">
         <article class="item"><span class="price">۶۲۰</span><div><h3>فیله سوخاری</h3><p>فیله + سس + سیب‌زمینی</p></div></article>
         <article class="item"><span class="price">۶۰۰</span><div><h3>توپک سوخاری</h3><p>مرغ سوخاری + سس مخصوص</p></div></article>
@@ -91,7 +119,10 @@
     </section>
 
     <section class="category" id="pasta">
-      <h2>پاستا / غذا</h2>
+      <div class="section-head">
+        <h2>پاستا / غذا</h2>
+        <span>Chef specials</span>
+      </div>
       <div class="items">
         <article class="item"><span class="price">۲۹۰</span><div><h3>پاستا پنه چیکن</h3><p>مرغ، خامه، قارچ، پنیر</p></div></article>
         <article class="item"><span class="price">۳۵۰</span><div><h3>پاستا پنه مادوتا</h3><p>مرغ، سس مخصوص، پنیر</p></div></article>
@@ -101,7 +132,10 @@
     </section>
 
     <section class="category" id="salad">
-      <h2>سالاد</h2>
+      <div class="section-head">
+        <h2>سالاد</h2>
+        <span>Fresh bowls</span>
+      </div>
       <div class="items">
         <article class="item"><span class="price">۲۵۰</span><div><h3>سالاد سزار</h3><p>کاهو، مرغ، پنیر، سس سزار</p></div></article>
         <article class="item"><span class="price">۲۳۰</span><div><h3>سالاد فصل</h3><p>سبزیجات تازه و سس مخصوص</p></div></article>
@@ -109,7 +143,10 @@
     </section>
 
     <section class="category" id="drink">
-      <h2>نوشیدنی</h2>
+      <div class="section-head">
+        <h2>نوشیدنی</h2>
+        <span>Cold drinks</span>
+      </div>
       <div class="items">
         <article class="item"><span class="price">۴۵</span><div><h3>نوشابه</h3><p>قوطی یا بطری</p></div></article>
         <article class="item"><span class="price">۵۵</span><div><h3>آب معدنی</h3><p>بطری سرد</p></div></article>
@@ -129,8 +166,9 @@
         categories.forEach(c => c.classList.remove('active'));
 
         tab.classList.add('active');
-        document.getElementById(target).classList.add('active');
-        document.getElementById(target).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const section = document.getElementById(target);
+        section.classList.add('active');
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
   </script>
