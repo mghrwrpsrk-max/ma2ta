@@ -388,9 +388,10 @@ body{
                                }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
+  scroll-padding-top: 140px;
 }
 
 .category-block {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 140px;
+  margin-top: 24px;
 }
