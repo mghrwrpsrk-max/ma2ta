@@ -4,17 +4,16 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>MA②TA | Digital Menu</title>
-
-<meta name="theme-color" content="#C9A227">
-<meta name="description" content="منوی دیجیتال رستوران مادوتا">
+<title>MA②TA Restaurant</title>
 
 <link rel="manifest" href="manifest.json">
+
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
@@ -23,25 +22,21 @@
 
 <body>
 
-<header class="navbar">
+<header class="header">
 
 <div class="container">
 
-<div class="brand">
+<a class="logo">
 
-<h1>MA<span>2</span>TA</h1>
+MA<span>2</span>TA
 
-<p>Premium Restaurant</p>
-
-</div>
+</a>
 
 <nav>
 
-<a href="#hero">خانه</a>
+<a href="#">خانه</a>
 
 <a href="#categories">منو</a>
-
-<a href="#special">پیشنهاد ویژه</a>
 
 <a href="#about">درباره ما</a>
 
@@ -53,35 +48,39 @@
 
 </header>
 
-<section id="hero">
+<section class="hero">
 
-<div class="overlay"></div>
+<div class="hero-overlay"></div>
 
 <div class="hero-content">
 
-<h2>
+<p class="subtitle">
 
-طعم واقعی کیفیت
-
-</h2>
-
-<h1>
-
-به رستوران
-
-<span>MA②TA</span>
-
-خوش آمدید
-
-</h1>
-
-<p>
-
-Good Food • Good Mood
+Premium Restaurant
 
 </p>
 
-<a href="#categories" class="main-btn">
+<h1>
+
+MA<span>2</span>TA
+
+</h1>
+
+<h2>
+
+Good Food • Good Mood
+
+</h2>
+
+<p class="description">
+
+به رستوران مادوتا خوش آمدید
+
+تجربه‌ای متفاوت از کیفیت، طعم و طراحی
+
+</p>
+
+<a href="#categories" class="hero-btn">
 
 مشاهده منو
 
@@ -91,91 +90,133 @@ Good Food • Good Mood
 
 </section>
 
+<!-- بخش دسته بندی -->
+
 <section id="categories">
 
-<div class="title">
+<div class="section-title">
 
 <h2>
 
-دسته بندی منو
+دسته بندی غذاها
 
 </h2>
+
+<p>
+
+دسته موردنظر خود را انتخاب کنید
+
+</p>
 
 </div>
 
 <div class="category-grid">
 
-<div class="category" data-category="pizza">
+<a class="category-card" data-category="pizza">
 
-<div class="icon">🍕</div>
+<div class="category-icon">🍕</div>
 
 <h3>پیتزا</h3>
 
-</div>
+<p>انواع پیتزا ایتالیایی و آمریکایی</p>
 
-<div class="category" data-category="burger">
+<span>مشاهده ←</span>
 
-<div class="icon">🍔</div>
+</a>
+
+<a class="category-card" data-category="burger">
+
+<div class="category-icon">🍔</div>
 
 <h3>برگر</h3>
 
-</div>
+<p>برگرهای دست ساز مادوتا</p>
 
-<div class="category" data-category="sandwich">
+<span>مشاهده ←</span>
 
-<div class="icon">🥪</div>
+</a>
+
+<a class="category-card" data-category="sandwich">
+
+<div class="category-icon">🥪</div>
 
 <h3>ساندویچ</h3>
 
-</div>
+<p>هات داگ و ساندویچ های ویژه</p>
 
-<div class="category" data-category="fried">
+<span>مشاهده ←</span>
 
-<div class="icon">🍗</div>
+</a>
+
+<a class="category-card" data-category="fried">
+
+<div class="category-icon">🍗</div>
 
 <h3>سوخاری</h3>
 
-</div>
+<p>مرغ سوخاری و فیله کریسپی</p>
 
-<div class="category" data-category="pasta">
+<span>مشاهده ←</span>
 
-<div class="icon">🍝</div>
+</a>
+
+<a class="category-card" data-category="pasta">
+
+<div class="category-icon">🍝</div>
 
 <h3>پاستا</h3>
 
-</div>
+<p>پاستاهای خامه‌ای و ایتالیایی</p>
 
-<div class="category" data-category="salad">
+<span>مشاهده ←</span>
 
-<div class="icon">🥗</div>
+</a>
+
+<a class="category-card" data-category="salad">
+
+<div class="category-icon">🥗</div>
 
 <h3>سالاد</h3>
 
-</div>
+<p>سالادهای تازه و سالم</p>
 
-<div class="category" data-category="fries">
+<span>مشاهده ←</span>
 
-<div class="icon">🍟</div>
+</a>
+
+<a class="category-card" data-category="fries">
+
+<div class="category-icon">🍟</div>
 
 <h3>سیب زمینی</h3>
 
-</div>
+<p>پیش غذا و سیب زمینی ویژه</p>
 
-<div class="category" data-category="drink">
+<span>مشاهده ←</span>
 
-<div class="icon">🥤</div>
+</a>
+
+<a class="category-card" data-category="drink">
+
+<div class="category-icon">🥤</div>
 
 <h3>نوشیدنی</h3>
 
-</div>
+<p>نوشیدنی های سرد و گرم</p>
+
+<span>مشاهده ←</span>
+
+</a>
 
 </div>
 
 </section>
 
+<!-- پیشنهاد ویژه -->
+
 <section id="special">
 
-<div class="title">
+<div class="section-title">
 
 <h2>
 
@@ -191,9 +232,11 @@ Good Food • Good Mood
 
 </section>
 
+<!-- منو -->
+
 <section id="menu">
 
-<div class="title">
+<div class="section-title">
 
 <h2>
 
@@ -214,9 +257,11 @@ placeholder="جستجوی غذا...">
 
 </section>
 
+<!-- درباره ما -->
+
 <section id="about">
 
-<div class="title">
+<div class="section-title">
 
 <h2>
 
@@ -228,50 +273,21 @@ placeholder="جستجوی غذا...">
 
 <p>
 
-رستوران مادوتا با استفاده از مواد اولیه تازه و باکیفیت،
-تجربه‌ای متفاوت از فست فود مدرن را برای شما فراهم می‌کند.
-
-</p>
+...</p>
 
 </section>
 
+<!-- تماس -->
+
 <section id="contact">
 
-<div class="title">
+<div class="section-title">
 
 <h2>
 
 تماس با ما
 
 </h2>
-
-</div>
-
-<div class="contact-grid">
-
-<a href="tel:+989121234567">
-
-📞 تماس
-
-</a>
-
-<a href="#">
-
-📍 موقعیت
-
-</a>
-
-<a href="#">
-
-💬 واتساپ
-
-</a>
-
-<a href="#">
-
-📷 اینستاگرام
-
-</a>
 
 </div>
 
