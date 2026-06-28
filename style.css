@@ -1364,3 +1364,98 @@ font-weight:bold;
 font-size:18px;
 
 }
+/* ===========================
+   Special Cards
+=========================== */
+
+#special-items{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+.special-card{
+
+background:#111;
+
+border:1px solid rgba(212,175,55,.3);
+
+border-radius:28px;
+
+padding:35px;
+
+position:relative;
+
+transition:.35s;
+
+overflow:hidden;
+
+}
+
+.special-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(212,175,55,.2);
+
+}
+
+.special-badge{
+
+position:absolute;
+
+top:20px;
+
+left:20px;
+
+background:#D4AF37;
+
+color:#111;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+font-size:14px;
+
+font-weight:bold;
+
+}
+
+.special-card h3{
+
+font-size:30px;
+
+margin-top:35px;
+
+margin-bottom:15px;
+
+}
+
+.special-card p{
+
+color:#bfbfbf;
+
+line-height:2;
+
+margin-bottom:25px;
+
+}
+
+.special-price{
+
+font-size:30px;
+
+font-weight:800;
+
+color:#D4AF37;
+
+margin-bottom:25px;
+
+}
