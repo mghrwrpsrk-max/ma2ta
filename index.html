@@ -1,1 +1,94 @@
-<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MA2TA</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"></head><body><header><div class="logo">MA<span>2</span>TA</div><p>Good Food • Good Mood</p></header><section><h1>Premium Fast Food Experience</h1><p>به رستوران مادوتا خوش آمدید</p><button>مشاهده منو</button></section><section><h2>دسته‌بندی‌ها</h2><div id="categoryList"></div></section><section><h2>غذاهای ویژه</h2><div id="featuredFoods"></div></section><footer>© MA2TA 2025</footer><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MA2TA | منوی دیجیتال</title>
+
+    <meta name="theme-color" content="#d4af37">
+    <meta name="description" content="منوی دیجیتال رستوران MA2TA">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="logo">
+        MA<span>2</span>TA
+    </div>
+
+    <p class="subtitle">
+        Premium Fast Food Experience
+    </p>
+
+    <h1>
+        به رستوران مادوتا خوش آمدید
+    </h1>
+
+    <button id="menuBtn">
+        مشاهده منو
+    </button>
+
+</header>
+
+
+<section id="categories">
+
+    <h2>دسته بندی ها</h2>
+
+    <div class="grid">
+
+        <button class="category" data-category="pizza">🍕 پیتزا</button>
+
+        <button class="category" data-category="burger">🍔 برگر</button>
+
+        <button class="category" data-category="sandwich">🌭 ساندویچ</button>
+
+        <button class="category" data-category="fried">🍗 سوخاری</button>
+
+        <button class="category" data-category="pasta">🍝 پاستا</button>
+
+        <button class="category" data-category="salad">🥗 سالاد</button>
+
+        <button class="category" data-category="fries">🍟 سیب زمینی</button>
+
+        <button class="category" data-category="drink">🥤 نوشیدنی</button>
+
+    </div>
+
+</section>
+
+
+<section id="menuSection">
+
+    <h2 id="categoryTitle">
+        منو
+    </h2>
+
+    <div id="menuItems">
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>MA<span>2</span>TA</h3>
+
+    <p>Good Food • Good Mood</p>
+
+    <p>© 2025</p>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
