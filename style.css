@@ -386,3 +386,11 @@ body{
     grid-template-columns:80px 1fr auto;
   }
                                }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+.category-block {
+  scroll-margin-top: 120px;
+}
