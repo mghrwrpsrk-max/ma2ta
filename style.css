@@ -1,1716 +1,388 @@
-/* ===================================
-   MA②TA Restaurant
-   Luxury UI - Part 1
-=================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap');
-
 :root{
-
---gold:#D4AF37;
---gold-light:#f0d777;
---dark:#070707;
---card:#111111;
---text:#ffffff;
---gray:#bdbdbd;
-
+  --bg:#050505;
+  --panel:#0d0d0d;
+  --panel2:#141414;
+  --gold:#c49a52;
+  --gold2:#e1c07b;
+  --text:#f5efe5;
+  --muted:#b8ad9d;
+  --line:rgba(196,154,82,.22);
 }
 
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
-}
-
-html{
-
-scroll-behavior:smooth;
-
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-
-font-family:'Vazirmatn',sans-serif;
-
-background:
-linear-gradient(rgba(8,8,8,.95),rgba(8,8,8,.95)),
-url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80");
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-
-color:white;
-
-overflow-x:hidden;
-
-}
-
-/* Scroll */
-
-::-webkit-scrollbar{
-
-width:8px;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-background:var(--gold);
-
-border-radius:20px;
-
-}
-
-::-webkit-scrollbar-track{
-
-background:#111;
-
-}
-
-/* ===================== */
-
-.container{
-
-width:92%;
-
-max-width:1300px;
-
-margin:auto;
-
-}
-
-/* ===================== */
-
-.navbar{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-right:0;
-
-z-index:999;
-
-background:rgba(0,0,0,.55);
-
-backdrop-filter:blur(12px);
-
-border-bottom:1px solid rgba(212,175,55,.35);
-
-transition:.4s;
-
-}
-
-.navbar .container{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:18px 0;
-
-}
-
-.brand h1{
-
-font-size:42px;
-
-font-weight:800;
-
-letter-spacing:3px;
-
-}
-
-.brand span{
-
-color:var(--gold);
-
-}
-
-.brand p{
-
-font-size:13px;
-
-letter-spacing:6px;
-
-color:var(--gold);
-
-margin-top:-6px;
-
-}
-
-nav{
-
-display:flex;
-
-gap:35px;
-
-}
-
-nav a{
-
-color:white;
-
-text-decoration:none;
-
-font-size:17px;
-
-transition:.3s;
-
-position:relative;
-
-}
-
-nav a:hover{
-
-color:var(--gold);
-
-}
-
-nav a::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-8px;
-
-right:0;
-
-width:0;
-
-height:2px;
-
-background:var(--gold);
-
-transition:.3s;
-
-}
-
-nav a:hover::after{
-
-width:100%;
-
-}
-
-/* ===================== */
-
-#hero{
-
-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-position:relative;
-
-}
-
-.overlay{
-
-position:absolute;
-
-inset:0;
-
-background:
-
-linear-gradient(
-
-rgba(0,0,0,.65),
-
-rgba(0,0,0,.78)
-
-);
-
-}
-
-.hero-content{
-
-position:relative;
-
-z-index:5;
-
-max-width:800px;
-
-padding:20px;
-
-}
-
-.hero-content h2{
-
-font-size:28px;
-
-font-weight:400;
-
-color:var(--gold);
-
-letter-spacing:2px;
-
-margin-bottom:20px;
-
-}
-
-.hero-content h1{
-
-font-size:72px;
-
-font-weight:800;
-
-line-height:1.4;
-
-}
-
-.hero-content h1 span{
-
-color:var(--gold);
-
-}
-
-.hero-content p{
-
-margin-top:25px;
-
-font-size:24px;
-
-color:#ddd;
-
-}
-
-.main-btn{
-
-display:inline-block;
-
-margin-top:45px;
-
-padding:18px 55px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-size:20px;
-
-font-weight:bold;
-
-background:var(--gold);
-
-color:#111;
-
-transition:.35s;
-
-box-shadow:
-
-0 0 25px rgba(212,175,55,.25);
-
-}
-
-.main-btn:hover{
-
-transform:translateY(-6px);
-
-box-shadow:
-
-0 0 35px rgba(212,175,55,.5);
-
-}
-
-/* ===================== */
-
-.title{
-
-text-align:center;
-
-margin-bottom:60px;
-
-}
-
-.title h2{
-
-font-size:44px;
-
-color:var(--gold);
-
-position:relative;
-
-display:inline-block;
-
-}
-
-.title h2::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-15px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-width:90px;
-
-height:3px;
-
-background:var(--gold);
-
-border-radius:20px;
-
-}
-
-/* ===================== */
-
-section{
-
-padding:90px 0;
-
-}
-/* ===================================
-   MA②TA Restaurant
-   Luxury UI - Part 2
-   Categories & Cards
-===================================*/
-
-.category-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:30px;
-
-}
-
-.category{
-
-background:rgba(20,20,20,.85);
-
-border:1px solid rgba(212,175,55,.35);
-
-border-radius:22px;
-
-padding:35px 25px;
-
-text-align:center;
-
-cursor:pointer;
-
-transition:.35s;
-
-backdrop-filter:blur(12px);
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.category::before{
-
-content:"";
-
-position:absolute;
-
-top:-120px;
-
-left:-120px;
-
-width:220px;
-
-height:220px;
-
-background:rgba(212,175,55,.08);
-
-border-radius:50%;
-
-transition:.4s;
-
-}
-
-.category:hover::before{
-
-transform:scale(2);
-
-}
-
-.category:hover{
-
-transform:translateY(-8px);
-
-border-color:#D4AF37;
-
-box-shadow:0 0 35px rgba(212,175,55,.25);
-
-}
-
-.category .icon{
-
-font-size:60px;
-
-margin-bottom:18px;
-
-}
-
-.category h3{
-
-font-size:26px;
-
-font-weight:700;
-
-color:white;
-
-}
-
-/* ========================= */
-
-#special-items,
-
-#menu-items{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-gap:30px;
-
-margin-top:30px;
-
-}
-
-/* ========================= */
-
-.card{
-
-background:#111;
-
-border-radius:24px;
-
-overflow:hidden;
-
-border:1px solid rgba(212,175,55,.25);
-
-transition:.35s;
-
-position:relative;
-
-}
-
-.card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 15px 40px rgba(0,0,0,.5);
-
-border-color:#D4AF37;
-
-}
-
-/* نوار طلایی بالا */
-
-.card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-right:0;
-
-height:4px;
-
-background:#D4AF37;
-
-}
-
-/* ========================= */
-
-.card-body{
-
-padding:28px;
-
-}
-
-.card-body h3{
-
-font-size:26px;
-
-margin-bottom:12px;
-
-font-weight:700;
-
-}
-
-.card-body p{
-
-color:#bfbfbf;
-
-font-size:15px;
-
-line-height:1.8;
-
-margin-bottom:15px;
-
-}
-
-/* ========================= */
-
-.price{
-
-font-size:30px;
-
-font-weight:800;
-
-color:#D4AF37;
-
-margin:15px 0;
-
-}
-
-/* ========================= */
-
-.order-btn{
-
-display:inline-flex;
-
-align-items:center;
-
-justify-content:center;
-
-padding:12px 28px;
-
-border-radius:40px;
-
-text-decoration:none;
-
-background:transparent;
-
-border:2px solid #D4AF37;
-
-color:#D4AF37;
-
-font-weight:700;
-
-transition:.3s;
-
-}
-
-.order-btn:hover{
-
-background:#D4AF37;
-
-color:#111;
-
-}
-
-/* ========================= */
-
-/* برچسب پیشنهاد ویژه */
-
-.badge{
-
-position:absolute;
-
-top:18px;
-
-left:18px;
-
-padding:7px 15px;
-
-background:#D4AF37;
-
-color:#111;
-
-font-size:13px;
-
-font-weight:bold;
-
-border-radius:30px;
-
-}
-
-/* ========================= */
-
-#searchInput{
-
-width:100%;
-
-max-width:550px;
-
-display:block;
-
-margin:0 auto 40px;
-
-padding:18px;
-
-border-radius:50px;
-
-background:#111;
-
-border:2px solid rgba(212,175,55,.35);
-
-color:white;
-
-font-size:17px;
-
-outline:none;
-
-transition:.3s;
-
-}
-
-#searchInput:focus{
-
-border-color:#D4AF37;
-
-box-shadow:0 0 20px rgba(212,175,55,.25);
-
-}
-/* ===================================
-   MA②TA Restaurant
-   Luxury UI - Part 3
-   About - Contact - Footer
-===================================*/
-
-/* ===== ABOUT ===== */
-
-#about{
-
-background:rgba(18,18,18,.85);
-
-border:1px solid rgba(212,175,55,.25);
-
-border-radius:30px;
-
-padding:70px 50px;
-
-text-align:center;
-
-backdrop-filter:blur(12px);
-
-}
-
-#about p{
-
-max-width:850px;
-
-margin:auto;
-
-font-size:20px;
-
-line-height:2.2;
-
-color:#d8d8d8;
-
-}
-
-/* ========================== */
-
-#contact{
-
-margin-top:90px;
-
-}
-
-.contact-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:25px;
-
-margin-top:45px;
-
-}
-
-.contact-grid a{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-height:85px;
-
-text-decoration:none;
-
-background:#111;
-
-border:1px solid rgba(212,175,55,.35);
-
-border-radius:20px;
-
-font-size:20px;
-
-font-weight:700;
-
-color:white;
-
-transition:.35s;
-
-}
-
-.contact-grid a:hover{
-
-background:#D4AF37;
-
-color:#111;
-
-transform:translateY(-6px);
-
-box-shadow:0 0 25px rgba(212,175,55,.35);
-
-}
-
-/* ========================== */
-
-footer{
-
-margin-top:100px;
-
-padding:70px 20px;
-
-border-top:1px solid rgba(212,175,55,.25);
-
-text-align:center;
-
-background:#090909;
-
-}
-
-footer p{
-
-color:#999;
-
-font-size:17px;
-
-letter-spacing:1px;
-
-margin-top:15px;
-
-}
-
-/* ========================== */
-
-.footer-logo{
-
-font-size:46px;
-
-font-weight:800;
-
-color:white;
-
-}
-
-.footer-logo span{
-
-color:#D4AF37;
-
-}
-
-.footer-desc{
-
-max-width:700px;
-
-margin:25px auto;
-
-line-height:2;
-
-color:#bbb;
-
-}
-
-/* ========================== */
-
-.footer-social{
-
-display:flex;
-
-justify-content:center;
-
-gap:18px;
-
-margin-top:35px;
-
-flex-wrap:wrap;
-
-}
-
-.footer-social a{
-
-width:55px;
-
-height:55px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-border-radius:50%;
-
-text-decoration:none;
-
-font-size:22px;
-
-border:1px solid rgba(212,175,55,.35);
-
-color:#D4AF37;
-
-transition:.35s;
-
-}
-
-.footer-social a:hover{
-
-background:#D4AF37;
-
-color:#111;
-
-transform:rotate(360deg);
-
-}
-
-/* ========================== */
-
-#topBtn{
-
-position:fixed;
-
-bottom:25px;
-
-left:25px;
-
-width:58px;
-
-height:58px;
-
-border:none;
-
-border-radius:50%;
-
-background:#D4AF37;
-
-color:#111;
-
-font-size:24px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-display:none;
-
-transition:.35s;
-
-box-shadow:0 0 25px rgba(212,175,55,.35);
-
-z-index:999;
-
-}
-
-#topBtn:hover{
-
-transform:translateY(-6px);
-
-}
-
-/* ========================== */
-
-/* انیمیشن محو شدن */
-
-.fade{
-
-animation:fade .8s ease;
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-/* ===================================
-   MA②TA Restaurant
-   Luxury UI - Part 4
-   Responsive & Effects
-===================================*/
-
-/* ---------- Hover Animation ---------- */
-
-.card,
-.category,
-.contact-grid a,
-.main-btn{
-    transition:all .35s ease;
-}
-
-.card:hover{
-    transform:translateY(-12px) scale(1.02);
-}
-
-.category:hover{
-    transform:translateY(-10px);
-}
-
-.main-btn:hover{
-    transform:translateY(-5px);
-}
-
-/* ---------- Fade Animation ---------- */
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-        transform:translateY(40px);
-
-    }
-
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-
-    }
-
-}
-
-section{
-
-    animation:fadeUp .8s ease;
-
-}
-
-/* ---------- Gold Selection ---------- */
-
-::selection{
-
-    background:#D4AF37;
-    color:#111;
-
-}
-
-/* ---------- Image Style ---------- */
-
-.card img{
-
-    transition:.4s;
-
-}
-
-.card:hover img{
-
-    transform:scale(1.08);
-
-}
-
-/* ---------- Mobile ---------- */
-
-@media(max-width:992px){
-
-nav{
-
-display:none;
-
-}
-
-.hero-content h1{
-
-font-size:52px;
-
-}
-
-.hero-content h2{
-
-font-size:24px;
-
-}
-
-.title h2{
-
-font-size:34px;
-
-}
-
-}
-
-/* ---------- Tablet ---------- */
-
-@media(max-width:768px){
-
-.container{
-
-width:94%;
-
-}
-
-.hero{
-
-padding:20px;
-
-}
-
-.hero-content h1{
-
-font-size:42px;
-
-line-height:1.6;
-
-}
-
-.hero-content p{
-
-font-size:18px;
-
-}
-
-.main-btn{
-
-padding:15px 35px;
-
-font-size:18px;
-
+  margin:0;
+  font-family:"Vazirmatn",sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(196,154,82,.12), transparent 25%),
+    linear-gradient(180deg,#090909 0%, #050505 100%);
+  color:var(--text);
+}
+
+.page{
+  width:min(430px,100%);
+  margin:0 auto;
+  min-height:100vh;
+  padding:16px 14px 28px;
+}
+
+.poster{
+  position:relative;
+  overflow:hidden;
+  padding:18px 18px 22px;
+  border:1px solid var(--line);
+  border-radius:28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015)),
+    linear-gradient(180deg, #090909, #050505);
+  box-shadow:0 22px 70px rgba(0,0,0,.55);
+}
+
+.glow{
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  filter:blur(30px);
+  pointer-events:none;
+}
+.glow-1{top:-80px; left:-90px; background:rgba(196,154,82,.16)}
+.glow-2{bottom:-90px; right:-80px; background:rgba(225,192,123,.08)}
+
+.top-brand{
+  position:relative;
+  text-align:center;
+  padding-top:8px;
+}
+
+.logo-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:2px;
+}
+
+.logo-mark{
+  font-size:56px;
+  font-weight:800;
+  color:var(--gold2);
+  line-height:1;
+  letter-spacing:.5px;
+  text-shadow:0 0 20px rgba(196,154,82,.12);
+}
+
+.logo-sub{
+  font-size:11px;
+  letter-spacing:5px;
+  color:var(--muted);
+}
+
+.mini-line{
+  width:120px;
+  height:1px;
+  margin:12px auto 10px;
+  background:linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.scan-title{
+  font-size:12px;
+  letter-spacing:2.8px;
+  color:var(--gold2);
+}
+
+.qr-frame{
+  position:relative;
+  width:216px;
+  aspect-ratio:1;
+  margin:18px auto 12px;
+  border-radius:22px;
+  background:linear-gradient(180deg, #f8f8f8, #ececec);
+  padding:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.qr-code{
+  width:100%;
+  height:100%;
+  border-radius:16px;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.12) 1px, transparent 1px) 0 0/18px 18px,
+    linear-gradient(rgba(0,0,0,.12) 1px, transparent 1px) 0 0/18px 18px,
+    #fff;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.qr-code::before{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border:10px solid #111;
+  border-radius:12px;
+  opacity:.08;
+}
+
+.qr-logo{
+  width:82px;
+  height:82px;
+  display:grid;
+  place-items:center;
+  border-radius:16px;
+  background:#0b0b0b;
+  color:var(--gold2);
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:.5px;
+  box-shadow:0 0 0 6px rgba(255,255,255,.95);
+  z-index:1;
+}
+
+.qr-corner{
+  position:absolute;
+  width:28px;
+  height:28px;
+  border:3px solid #111;
+}
+.tl{top:8px; left:8px; border-right:0; border-bottom:0}
+.tr{top:8px; right:8px; border-left:0; border-bottom:0}
+.bl{bottom:8px; left:8px; border-right:0; border-top:0}
+.br{bottom:8px; right:8px; border-left:0; border-top:0}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin-top:10px;
+}
+
+.feature{
+  text-align:center;
+  font-size:10px;
+  color:var(--text);
+  padding:9px 6px;
+  border:1px solid rgba(196,154,82,.15);
+  border-radius:14px;
+  background:rgba(255,255,255,.02);
+}
+
+.slogan{
+  text-align:center;
+  margin-top:14px;
+  color:var(--gold2);
+  font-size:14px;
+  font-style:italic;
+}
+
+.menu-phone{
+  margin-top:18px;
+  padding:14px 14px 10px;
+  border-radius:28px;
+  background:linear-gradient(180deg, #0b0b0b, #070707);
+  border:1px solid var(--line);
+}
+
+.phone-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:var(--gold2);
+  margin-bottom:10px;
+}
+
+.phone-brand{
+  font-weight:700;
+  font-size:18px;
+}
+
+.welcome{
+  text-align:center;
+  padding:6px 0 12px;
+}
+
+.welcome-sm{
+  margin:0;
+  font-size:11px;
+  letter-spacing:2.8px;
+  color:var(--muted);
+}
+
+.welcome h1{
+  margin:4px 0;
+  font-size:26px;
+  color:var(--text);
+  letter-spacing:1px;
+}
+
+.welcome-fa{
+  margin:0;
+  color:var(--gold2);
+  font-size:13px;
 }
 
 .category-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-#special-items,
-#menu-items{
-
-grid-template-columns:1fr;
-
-}
-
-.contact-grid{
-
-grid-template-columns:1fr;
-
-}
-
-#about{
-
-padding:40px 25px;
-
-}
-
-#about p{
-
-font-size:17px;
-
-}
-
-}
-
-/* ---------- Small Mobile ---------- */
-
-@media(max-width:480px){
-
-.brand h1{
-
-font-size:30px;
-
-}
-
-.brand p{
-
-font-size:10px;
-
-letter-spacing:3px;
-
-}
-
-.hero-content h1{
-
-font-size:34px;
-
-}
-
-.hero-content h2{
-
-font-size:18px;
-
-}
-
-.hero-content p{
-
-font-size:16px;
-
-}
-
-.title h2{
-
-font-size:28px;
-
-}
-
-.category{
-
-padding:25px 15px;
-
-}
-
-.category .icon{
-
-font-size:42px;
-
-}
-
-.category h3{
-
-font-size:20px;
-
-}
-
-.card-body{
-
-padding:20px;
-
-}
-
-.card-body h3{
-
-font-size:22px;
-
-}
-
-.price{
-
-font-size:24px;
-
-}
-
-#topBtn{
-
-width:50px;
-height:50px;
-font-size:20px;
-
-}
-
-}
-
-/* ---------- Glass Effect ---------- */
-
-.category,
-.card,
-#about{
-
-backdrop-filter:blur(14px);
-
-}
-
-/* ---------- Gold Glow ---------- */
-
-.main-btn,
-.order-btn{
-
-box-shadow:0 0 18px rgba(212,175,55,.20);
-
-}
-
-.main-btn:hover,
-.order-btn:hover{
-
-box-shadow:0 0 35px rgba(212,175,55,.45);
-
-   }
-/* ===== Version 2 - Category Cards ===== */
-
-.category-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:30px;
-
-margin-top:60px;
-
-}
-
-.category-card{
-
-background:rgba(20,20,20,.85);
-
-border:1px solid rgba(212,175,55,.35);
-
-border-radius:28px;
-
-padding:40px 30px;
-
-text-decoration:none;
-
-color:white;
-
-transition:.35s;
-
-position:relative;
-
-overflow:hidden;
-
-backdrop-filter:blur(12px);
-
-}
-
-.category-card::before{
-
-content:"";
-
-position:absolute;
-
-top:-80px;
-
-left:-80px;
-
-width:170px;
-
-height:170px;
-
-border-radius:50%;
-
-background:rgba(212,175,55,.08);
-
-transition:.4s;
-
-}
-
-.category-card:hover::before{
-
-transform:scale(2);
-
-}
-
-.category-card:hover{
-
-transform:translateY(-12px);
-
-border-color:#D4AF37;
-
-box-shadow:0 20px 45px rgba(212,175,55,.18);
-
-}
-
-.category-icon{
-
-font-size:60px;
-
-margin-bottom:25px;
-
-}
-
-.category-card h3{
-
-font-size:28px;
-
-margin-bottom:12px;
-
-}
-
-.category-card p{
-
-color:#bfbfbf;
-
-line-height:1.8;
-
-margin-bottom:30px;
-
-min-height:60px;
-
-}
-
-.category-card span{
-
-color:#D4AF37;
-
-font-weight:bold;
-
-font-size:18px;
-
-}
-/* ===========================
-   Special Cards
-=========================== */
-
-#special-items{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-gap:35px;
-
-margin-top:60px;
-
-}
-
-.special-card{
-
-background:#111;
-
-border:1px solid rgba(212,175,55,.3);
-
-border-radius:28px;
-
-padding:35px;
-
-position:relative;
-
-transition:.35s;
-
-overflow:hidden;
-
-}
-
-.special-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 20px 40px rgba(212,175,55,.2);
-
-}
-
-.special-badge{
-
-position:absolute;
-
-top:20px;
-
-left:20px;
-
-background:#D4AF37;
-
-color:#111;
-
-padding:8px 18px;
-
-border-radius:30px;
-
-font-size:14px;
-
-font-weight:bold;
-
-}
-
-.special-card h3{
-
-font-size:30px;
-
-margin-top:35px;
-
-margin-bottom:15px;
-
-}
-
-.special-card p{
-
-color:#bfbfbf;
-
-line-height:2;
-
-margin-bottom:25px;
-
-}
-
-.special-price{
-
-font-size:30px;
-
-font-weight:800;
-
-color:#D4AF37;
-
-margin-bottom:25px;
-
-}
-/*==================================
- HEADER V2
-===================================*/
-
-.header{
-
-position:fixed;
-
-top:0;
-
-right:0;
-
-left:0;
-
-z-index:9999;
-
-background:rgba(5,5,5,.65);
-
-backdrop-filter:blur(15px);
-
-border-bottom:1px solid rgba(212,175,55,.15);
-
-}
-
-.header .container{
-
-height:90px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-max-width:1300px;
-
-margin:auto;
-
-padding:0 30px;
-
-}
-
-.logo{
-
-text-decoration:none;
-
-display:flex;
-
-align-items:center;
-
-font-size:42px;
-
-font-weight:800;
-
-letter-spacing:3px;
-
-}
-
-.logo-main{
-
-color:white;
-
-}
-
-.logo-number{
-
-color:#D4AF37;
-
-margin:0 3px;
-
-}
-
-.navbar{
-
-display:flex;
-
-gap:35px;
-
-}
-
-.navbar a{
-
-color:white;
-
-text-decoration:none;
-
-font-size:17px;
-
-font-weight:500;
-
-transition:.3s;
-
-position:relative;
-
-}
-
-.navbar a:hover{
-
-color:#D4AF37;
-
-}
-
-.navbar a::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-8px;
-
-right:0;
-
-width:0;
-
-height:2px;
-
-background:#D4AF37;
-
-transition:.3s;
-
-}
-
-.navbar a:hover::after{
-
-width:100%;
-
-}
-
-.menu-toggle{
-
-display:none;
-
-width:45px;
-
-height:45px;
-
-border:none;
-
-border-radius:12px;
-
-background:#D4AF37;
-
-font-size:24px;
-
-cursor:pointer;
-
-}
-
-@media(max-width:900px){
-
-.navbar{
-
-display:none;
-
-}
-
-.menu-toggle{
-
-display:block;
-
-}
-
-}
-/* ========= HEADER V2 ========= */
-
-.header{
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    z-index:1000;
-    background:rgba(10,10,10,.75);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(212,175,55,.2);
-}
-
-.header .container{
-    max-width:1300px;
-    margin:auto;
-    height:90px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 30px;
-}
-
-.logo{
-    text-decoration:none;
-    font-size:40px;
-    font-weight:800;
-    letter-spacing:2px;
-}
-
-.logo-white{
-    color:#fff;
-}
-
-.logo-gold{
-    color:#D4AF37;
-}
-
-.navbar{
-    display:flex;
-    gap:35px;
-}
-
-.navbar a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-    position:relative;
-}
-
-.navbar a:hover{
-    color:#D4AF37;
-}
-
-.navbar a::after{
-    content:"";
-    position:absolute;
-    right:0;
-    bottom:-6px;
-    width:0;
-    height:2px;
-    background:#D4AF37;
-    transition:.3s;
-}
-
-.navbar a:hover::after{
-    width:100%;
-}
-
-.menu-toggle{
-    display:none;
-    border:none;
-    background:#D4AF37;
-    color:#111;
-    width:46px;
-    height:46px;
-    border-radius:10px;
-    font-size:24px;
-    cursor:pointer;
-}
-
-@media(max-width:900px){
-
-    .navbar{
-        display:none;
-    }
-
-    .menu-toggle{
-        display:block;
-    }
-
-}
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.cat-card{
+  text-decoration:none;
+  color:var(--text);
+  min-height:88px;
+  padding:10px;
+  border-radius:18px;
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
+  border:1px solid rgba(196,154,82,.14);
+  display:grid;
+  grid-template-columns:62px 1fr;
+  gap:10px;
+  align-items:center;
+}
+
+.cat-card.full{
+  grid-column:1 / -1;
+}
+
+.cat-img,.item-img{
+  width:62px;
+  height:62px;
+  border-radius:16px;
+  background-size:cover;
+  background-position:center;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+.pizza{
+  background-image:radial-gradient(circle at 35% 35%, #ffd47a 0 8%, transparent 9%),
+  radial-gradient(circle at 60% 45%, #b64a2d 0 10%, transparent 11%),
+  radial-gradient(circle at 45% 70%, #8a5a2b 0 12%, transparent 13%),
+  linear-gradient(135deg, #3a2212, #8b4a1f);
+}
+.burger{
+  background-image:radial-gradient(circle at 50% 25%, #f1c37c 0 12%, transparent 13%),
+  radial-gradient(circle at 50% 50%, #7b3d1f 0 18%, transparent 19%),
+  linear-gradient(135deg, #2f1b12, #9b5b2d);
+}
+.fried{
+  background-image:radial-gradient(circle at 30% 30%, #f1c37c 0 9%, transparent 10%),
+  radial-gradient(circle at 65% 55%, #f7d58d 0 10%, transparent 11%),
+  linear-gradient(135deg, #4a2c15, #b27731);
+}
+.salad{
+  background-image:radial-gradient(circle at 35% 35%, #9bd68d 0 10%, transparent 11%),
+  radial-gradient(circle at 58% 55%, #d7f0a4 0 11%, transparent 12%),
+  linear-gradient(135deg, #17351c, #4f8f3f);
+}
+.fries{
+  background-image:radial-gradient(circle at 35% 35%, #f3cf72 0 10%, transparent 11%),
+  radial-gradient(circle at 58% 55%, #deae36 0 13%, transparent 14%),
+  linear-gradient(135deg, #473311, #c28a2f);
+}
+.drinks{
+  background-image:radial-gradient(circle at 40% 30%, #7de7ff 0 9%, transparent 10%),
+  radial-gradient(circle at 60% 60%, #b6ffdf 0 11%, transparent 12%),
+  linear-gradient(135deg, #113644, #1c7f7f);
+}
+.dessert{
+  background-image:radial-gradient(circle at 40% 30%, #f5b4c7 0 9%, transparent 10%),
+  radial-gradient(circle at 60% 60%, #e8d29b 0 12%, transparent 13%),
+  linear-gradient(135deg, #3d1b27, #a25568);
+}
+
+.cat-txt span{
+  display:block;
+  font-size:13px;
+  font-weight:700;
+}
+.cat-txt small{
+  display:block;
+  color:var(--muted);
+  font-size:10px;
+  margin-top:2px;
+  letter-spacing:1px;
+}
+
+.bottom-nav{
+  margin-top:12px;
+  padding:10px 6px 2px;
+  border-top:1px solid rgba(196,154,82,.12);
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:6px;
+  color:var(--muted);
+  font-size:11px;
+  text-align:center;
+}
+
+.cards{
+  margin-top:18px;
+  display:grid;
+  gap:18px;
+}
+
+.card-section{
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:rgba(255,255,255,.02);
+}
+
+.card-section h2{
+  margin:0 0 12px;
+  color:var(--gold2);
+  font-size:18px;
+}
+
+.item{
+  display:grid;
+  grid-template-columns:66px 1fr auto;
+  gap:12px;
+  align-items:center;
+  padding:10px;
+  border-radius:18px;
+  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+  border:1px solid rgba(196,154,82,.10);
+  margin-top:10px;
+}
+
+.item-info h3{
+  margin:0 0 4px;
+  font-size:15px;
+}
+
+.item-info p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.55;
+}
+
+.item-price{
+  color:var(--gold2);
+  font-weight:800;
+  font-size:15px;
+}
+
+@media (min-width:820px){
+  .page{
+    max-width:1200px;
+  }
+  .poster{
+    max-width:430px;
+    margin:0 auto;
+  }
+  .menu-phone{
+    max-width:430px;
+    margin:18px auto 0;
+  }
+  .cards{
+    max-width:860px;
+    margin:18px auto 0;
+  }
+  .card-section .item{
+    grid-template-columns:80px 1fr auto;
+  }
+                               }
