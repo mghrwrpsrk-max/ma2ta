@@ -6,99 +6,167 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MA2TA Restaurant</title>
+<title>MA②TA | Digital Menu</title>
+
+<meta name="theme-color" content="#C9A227">
+<meta name="description" content="منوی دیجیتال رستوران مادوتا">
 
 <link rel="manifest" href="manifest.json">
-
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<header class="hero">
+<header class="navbar">
 
-<div class="hero-overlay"></div>
+<div class="container">
 
-<div class="hero-content">
+<div class="brand">
 
-<div class="logo">
 <h1>MA<span>2</span>TA</h1>
-<p>RESTAURANT</p>
+
+<p>Premium Restaurant</p>
+
 </div>
 
-<h2>
-به رستوران
-<span>مادوتا</span>
-خوش آمدید
-</h2>
+<nav>
 
-<p class="slogan">
-Good Food • Good Mood
-</p>
+<a href="#hero">خانه</a>
 
-<a href="#categories" class="btn">
-مشاهده منو
-</a>
+<a href="#categories">منو</a>
+
+<a href="#special">پیشنهاد ویژه</a>
+
+<a href="#about">درباره ما</a>
+
+<a href="#contact">تماس</a>
+
+</nav>
 
 </div>
 
 </header>
 
+<section id="hero">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h2>
+
+طعم واقعی کیفیت
+
+</h2>
+
+<h1>
+
+به رستوران
+
+<span>MA②TA</span>
+
+خوش آمدید
+
+</h1>
+
+<p>
+
+Good Food • Good Mood
+
+</p>
+
+<a href="#categories" class="main-btn">
+
+مشاهده منو
+
+</a>
+
+</div>
+
+</section>
+
 <section id="categories">
 
-<div class="section-title">
+<div class="title">
 
-<h2>دسته بندی ها</h2>
+<h2>
+
+دسته بندی منو
+
+</h2>
 
 </div>
 
 <div class="category-grid">
 
 <div class="category" data-category="pizza">
-🍕
+
+<div class="icon">🍕</div>
+
 <h3>پیتزا</h3>
+
 </div>
 
 <div class="category" data-category="burger">
-🍔
+
+<div class="icon">🍔</div>
+
 <h3>برگر</h3>
+
 </div>
 
 <div class="category" data-category="sandwich">
-🥪
+
+<div class="icon">🥪</div>
+
 <h3>ساندویچ</h3>
+
 </div>
 
 <div class="category" data-category="fried">
-🍗
+
+<div class="icon">🍗</div>
+
 <h3>سوخاری</h3>
+
 </div>
 
 <div class="category" data-category="pasta">
-🍝
+
+<div class="icon">🍝</div>
+
 <h3>پاستا</h3>
+
 </div>
 
 <div class="category" data-category="salad">
-🥗
+
+<div class="icon">🥗</div>
+
 <h3>سالاد</h3>
+
+</div>
+
+<div class="category" data-category="fries">
+
+<div class="icon">🍟</div>
+
+<h3>سیب زمینی</h3>
+
 </div>
 
 <div class="category" data-category="drink">
-🥤
-<h3>نوشیدنی</h3>
-</div>
 
-<div class="category" data-category="dessert">
-🍰
-<h3>دسر</h3>
+<div class="icon">🥤</div>
+
+<h3>نوشیدنی</h3>
+
 </div>
 
 </div>
@@ -107,9 +175,13 @@ Good Food • Good Mood
 
 <section id="special">
 
-<div class="section-title">
+<div class="title">
 
-<h2>پیشنهاد ویژه مادوتا</h2>
+<h2>
+
+پیشنهاد ویژه
+
+</h2>
 
 </div>
 
@@ -121,11 +193,20 @@ Good Food • Good Mood
 
 <section id="menu">
 
-<div class="section-title">
+<div class="title">
 
-<h2>تمام منو</h2>
+<h2>
+
+منوی رستوران
+
+</h2>
 
 </div>
+
+<input
+type="text"
+id="searchInput"
+placeholder="جستجوی غذا...">
 
 <div id="menu-items">
 
@@ -135,15 +216,20 @@ Good Food • Good Mood
 
 <section id="about">
 
-<div class="section-title">
+<div class="title">
 
-<h2>درباره ما</h2>
+<h2>
+
+درباره MA②TA
+
+</h2>
 
 </div>
 
 <p>
 
-رستوران مادوتا با ارائه انواع غذاهای فست فود، پیتزا، برگر، ساندویچ، سوخاری، سالاد و نوشیدنی، تجربه‌ای متفاوت از کیفیت و طعم را برای شما فراهم می‌کند.
+رستوران مادوتا با استفاده از مواد اولیه تازه و باکیفیت،
+تجربه‌ای متفاوت از فست فود مدرن را برای شما فراهم می‌کند.
 
 </p>
 
@@ -151,24 +237,40 @@ Good Food • Good Mood
 
 <section id="contact">
 
-<div class="section-title">
+<div class="title">
 
-<h2>تماس با ما</h2>
+<h2>
+
+تماس با ما
+
+</h2>
 
 </div>
 
-<div class="contact-box">
+<div class="contact-grid">
 
-<a href="tel:09120000000">
+<a href="tel:+989121234567">
+
 📞 تماس
+
 </a>
 
 <a href="#">
-📍 آدرس
+
+📍 موقعیت
+
 </a>
 
 <a href="#">
+
 💬 واتساپ
+
+</a>
+
+<a href="#">
+
+📷 اینستاگرام
+
 </a>
 
 </div>
@@ -177,45 +279,9 @@ Good Food • Good Mood
 
 <footer>
 
-<div class="features">
-
-<div>
-
-👨‍🍳
-
-<p>مواد اولیه تازه</p>
-
-</div>
-
-<div>
-
-🍽️
-
-<p>کیفیت بالا</p>
-
-</div>
-
-<div>
-
-❤️
-
-<p>مشتری مداری</p>
-
-</div>
-
-<div>
-
-⭐
-
-<p>محیط لوکس</p>
-
-</div>
-
-</div>
-
 <p>
 
-© 2025 MA2TA Restaurant
+© 2025 MA②TA Restaurant
 
 </p>
 
