@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "id": "pizza",
+      "title": "پیتزا",
+      "items": []
+    },
+    {
+      "id": "burger",
+      "title": "برگر",
+      "items": []
+    },
+    {
+      "id": "sandwich",
+      "title": "ساندویچ",
+      "items": []
+    },
+    {
+      "id": "fried",
+      "title": "سوخاری",
+      "items": []
+    },
+    {
+      "id": "doner",
+      "title": "دونر",
+      "items": []
+    },
+    {
+      "id": "pasta",
+      "title": "پاستا",
+      "items": []
+    },
+    {
+      "id": "salad",
+      "title": "سالاد",
+      "items": []
+    },
+    {
+      "id": "drink",
+      "title": "نوشیدنی",
+      "items": []
+    }
+  ]
+}
