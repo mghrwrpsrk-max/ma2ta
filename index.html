@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>منوی رستوران ماژتا</title>
+  <title>ماژتا | منوی دیجیتال</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
@@ -11,103 +11,128 @@
 </head>
 <body>
   <main class="poster">
-    <section class="top-banner">
+    <header class="top-banner">
       <div class="brand-badge">فست فود</div>
       <h1>مادوتا</h1>
-      <p class="brand-note">MA2TA.TBZ</p>
+      <p>MA2TA.TBZ</p>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="mini-card qr-card">
+          <div class="qr">QR</div>
+          <div class="qr-text">@MA2TA.TBZ</div>
+        </div>
+
+        <div class="mini-card phone-card">
+          <div class="phone">☎ ۲۲۳۰۰۸۸۸</div>
+          <div class="phone">☎ ۲۲۲۳۱۴۵۶</div>
+        </div>
+      </div>
+
+      <div class="hero-center">
+        <div class="title-card">
+          <div class="title-small">فست فود</div>
+          <div class="title-big">مادوتا</div>
+        </div>
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=1200&q=80"
+          alt="burger"
+        />
+      </div>
+
+      <div class="hero-right">
+        <div class="promo">Snapp! Food</div>
+        <div class="brand-id">MA2TA.TBZ</div>
+      </div>
     </section>
 
-    <section class="hero-grid">
-      <aside class="sidebar left">
-        <div class="section-title">برگر</div>
-        <div class="menu-list">
-          <article class="menu-item"><span class="price">۴۱۹</span><div><h3>شِف برگر</h3><p>برگر + پنیر + سس مخصوص + سیب‌زمینی</p></div></article>
-          <article class="menu-item"><span class="price">۳۹۹</span><div><h3>سوپر یک‌جاپد</h3><p>برگر + پنیر + قارچ + بیکن + سس</p></div></article>
-          <article class="menu-item"><span class="price">۳۹۹</span><div><h3>مینی چید</h3><p>برگر کوچک با سس ویژه و پنیر</p></div></article>
-          <article class="menu-item"><span class="price">۳۱۹</span><div><h3>یک‌مک برگر</h3><p>دو لایه گوشت + پنیر + خیارشور</p></div></article>
-          <article class="menu-item"><span class="price">۲۹۹</span><div><h3>میکس برگر</h3><p>ترکیب گوشت و مرغ با سس مخصوص</p></div></article>
-          <article class="menu-item"><span class="price">۳۹۹</span><div><h3>رویا برگر</h3><p>۲ گوشت + پنیر + قارچ + گوجه</p></div></article>
-          <article class="menu-item"><span class="price">۲۵۹</span><div><h3>چیز برگر</h3><p>برگر + پنیر + گوجه + خیارشور</p></div></article>
-          <article class="menu-item"><span class="price">۲۷۹</span><div><h3>دوبل برگر</h3><p>دو لایه گوشت + پنیر + سس</p></div></article>
-          <article class="menu-item"><span class="price">۲۹۹</span><div><h3>دوبل چیز برگر</h3><p>دوبل گوشت + دوبل پنیر + سس</p></div></article>
-          <article class="menu-item"><span class="price">۳۱۰</span><div><h3>قارچ برگر</h3><p>برگر + قارچ + پنیر + سس قارچ</p></div></article>
-        </div>
-      </aside>
+    <section class="tabs">
+      <button class="tab active" data-target="burger">برگر</button>
+      <button class="tab" data-target="pizza">پیتزا</button>
+      <button class="tab" data-target="fried">سوخاری</button>
+      <button class="tab" data-target="pasta">پاستا / غذا</button>
+      <button class="tab" data-target="salad">سالاد</button>
+      <button class="tab" data-target="drink">نوشیدنی</button>
+    </section>
 
-      <section class="center-panel">
-        <div class="center-top">
-          <div class="title-card">
-            <div class="small">فست فود</div>
-            <div class="big">مادوتا</div>
-          </div>
-          <img class="hero-food" src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=1200&q=80" alt="burger" />
-        </div>
+    <section class="category active" id="burger">
+      <h2>برگر</h2>
+      <div class="items">
+        <article class="item"><span class="price">۴۱۹</span><div><h3>شِف برگر</h3><p>برگر + پنیر + سس مخصوص + سیب‌زمینی</p></div></article>
+        <article class="item"><span class="price">۳۹۹</span><div><h3>سوپر یک‌جاپد</h3><p>برگر + پنیر + قارچ + بیکن + سس</p></div></article>
+        <article class="item"><span class="price">۳۱۹</span><div><h3>یک‌مک برگر</h3><p>دو لایه گوشت + پنیر + خیارشور</p></div></article>
+        <article class="item"><span class="price">۲۹۹</span><div><h3>میکس برگر</h3><p>ترکیب گوشت و مرغ با سس مخصوص</p></div></article>
+        <article class="item"><span class="price">۲۷۹</span><div><h3>دوبل برگر</h3><p>دو لایه گوشت + پنیر + سس</p></div></article>
+        <article class="item"><span class="price">۲۵۹</span><div><h3>چیز برگر</h3><p>برگر + پنیر + گوجه + خیارشور</p></div></article>
+      </div>
+    </section>
 
-        <div class="mid-bar">
-          <div class="qr-box">
-            <div class="qr">QR</div>
-            <div class="handle">@MA2TA.TBZ</div>
-          </div>
-          <div class="contact-pill">☎ ۲۲۳۰۰۸۸۸</div>
-          <div class="contact-pill">☎ ۲۲۲۳۱۴۵۶</div>
-        </div>
+    <section class="category" id="pizza">
+      <h2>پیتزا</h2>
+      <div class="items">
+        <article class="item"><span class="price">۵۱۹</span><div><h3>پیتزا مخصوص مادوتا</h3><p>گوشت، قارچ، پنیر، سس مخصوص</p></div></article>
+        <article class="item"><span class="price">۴۵۹</span><div><h3>پیتزا رست بیف</h3><p>رست بیف، پنیر، سس مخصوص</p></div></article>
+        <article class="item"><span class="price">۳۹۹</span><div><h3>پیتزا پپرونی</h3><p>پپرونی، پنیر، سس مخصوص</p></div></article>
+        <article class="item"><span class="price">۳۹۹</span><div><h3>پیتزا سبزیجات</h3><p>فلفل دلمه، قارچ، زیتون، پنیر</p></div></article>
+        <article class="item"><span class="price">۴۱۹</span><div><h3>پیتزا آلفردو</h3><p>مرغ، سس آلفردو، قارچ، پنیر</p></div></article>
+      </div>
+    </section>
 
-        <div class="promo-strip">
-          <div>Snapp! Food</div>
-          <div class="mini-chip">MA2TA.TBZ</div>
-        </div>
+    <section class="category" id="fried">
+      <h2>سوخاری</h2>
+      <div class="items">
+        <article class="item"><span class="price">۶۲۰</span><div><h3>فیله سوخاری</h3><p>فیله + سس + سیب‌زمینی</p></div></article>
+        <article class="item"><span class="price">۶۰۰</span><div><h3>توپک سوخاری</h3><p>مرغ سوخاری + سس مخصوص</p></div></article>
+        <article class="item"><span class="price">۵۵۰</span><div><h3>قارچ سوخاری</h3><p>قارچ سوخاری + سس</p></div></article>
+        <article class="item"><span class="price">۵۴۵</span><div><h3>بال و کتف</h3><p>بال سوخاری + سس تند</p></div></article>
+      </div>
+    </section>
 
-        <div class="bottom-grid">
-          <div class="block">
-            <div class="section-title">سوخاری</div>
-            <div class="menu-list compact">
-              <article class="menu-item"><span class="price">۶۲۰</span><div><h3>فیله سوخاری</h3><p>فیله + سس + سیب‌زمینی</p></div></article>
-              <article class="menu-item"><span class="price">۶۰۰</span><div><h3>توپک سوخاری</h3><p>مرغ سوخاری + سس مخصوص</p></div></article>
-              <article class="menu-item"><span class="price">۵۵۰</span><div><h3>قارچ سوخاری</h3><p>قارچ سوخاری + سس</p></div></article>
-              <article class="menu-item"><span class="price">۵۴۵</span><div><h3>بال و کتف</h3><p>بال سوخاری + سس تند</p></div></article>
-            </div>
-          </div>
+    <section class="category" id="pasta">
+      <h2>پاستا / غذا</h2>
+      <div class="items">
+        <article class="item"><span class="price">۲۹۰</span><div><h3>پاستا پنه چیکن</h3><p>مرغ، خامه، قارچ، پنیر</p></div></article>
+        <article class="item"><span class="price">۳۵۰</span><div><h3>پاستا پنه مادوتا</h3><p>مرغ، سس مخصوص، پنیر</p></div></article>
+        <article class="item"><span class="price">۲۹۰</span><div><h3>پاستا پنه مرغ</h3><p>پنه + مرغ + خامه + پنیر</p></div></article>
+        <article class="item"><span class="price">۲۵۰</span><div><h3>سالاد سزار</h3><p>کاهو، مرغ، پنیر، سس سزار</p></div></article>
+      </div>
+    </section>
 
-          <div class="block">
-            <div class="section-title">پاستا / غذا</div>
-            <div class="menu-list compact">
-              <article class="menu-item"><span class="price">۲۹۰</span><div><h3>پاستا پنه چیکن</h3><p>مرغ، خامه، قارچ، پنیر</p></div></article>
-              <article class="menu-item"><span class="price">۳۵۰</span><div><h3>پاستا پنه مادوتا</h3><p>مرغ، سس مخصوص، پنیر</p></div></article>
-              <article class="menu-item"><span class="price">۲۹۰</span><div><h3>پاستا پنه مرغ</h3><p>پنه + مرغ + خامه + پنیر</p></div></article>
-              <article class="menu-item"><span class="price">۲۵۰</span><div><h3>سالاد سزار</h3><p>کاهو، مرغ، پنیر، سس سزار</p></div></article>
-            </div>
-          </div>
+    <section class="category" id="salad">
+      <h2>سالاد</h2>
+      <div class="items">
+        <article class="item"><span class="price">۲۵۰</span><div><h3>سالاد سزار</h3><p>کاهو، مرغ، پنیر، سس سزار</p></div></article>
+        <article class="item"><span class="price">۲۳۰</span><div><h3>سالاد فصل</h3><p>سبزیجات تازه و سس مخصوص</p></div></article>
+      </div>
+    </section>
 
-          <div class="block full">
-            <div class="section-title">پیتزا</div>
-            <div class="menu-list compact three-col">
-              <article class="menu-item"><span class="price">۵۱۹</span><div><h3>پیتزا مخصوص مادوتا</h3><p>گوشت، قارچ، پنیر، سس مخصوص</p></div></article>
-              <article class="menu-item"><span class="price">۴۵۹</span><div><h3>پیتزا رست بیف</h3><p>رست بیف، پنیر، سس مخصوص</p></div></article>
-              <article class="menu-item"><span class="price">۳۹۹</span><div><h3>پیتزا گوشت</h3><p>گوشت چرخ‌کرده، قارچ، پنیر</p></div></article>
-              <article class="menu-item"><span class="price">۳۹۹</span><div><h3>پیتزا پپرونی</h3><p>پپرونی، پنیر، سس مخصوص</p></div></article>
-              <article class="menu-item"><span class="price">۳۹۹</span><div><h3>پیتزا سبزیجات</h3><p>فلفل دلمه، قارچ، زیتون، پنیر</p></div></article>
-              <article class="menu-item"><span class="price">۴۱۹</span><div><h3>پیتزا آلفردو</h3><p>مرغ، سس آلفردو، قارچ، پنیر</p></div></article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <aside class="sidebar right">
-        <div class="section-title">پیتزا</div>
-        <div class="menu-list">
-          <article class="menu-item"><span class="price">۵۱۹</span><div><h3>پیتزا مخصوص مادوتا</h3><p>گوشت، قارچ، پنیر، سس مخصوص</p></div></article>
-          <article class="menu-item"><span class="price">۴۵۹</span><div><h3>پیتزا رست بیف</h3><p>رست بیف + پنیر + سس</p></div></article>
-          <article class="menu-item"><span class="price">۳۹۹</span><div><h3>پیتزا استریپس</h3><p>مرغ، قارچ، پنیر، سس</p></div></article>
-          <article class="menu-item"><span class="price">۳۹۹</span><div><h3>پیتزا اسپشیال</h3><p>مخلوط گوشت، قارچ، پنیر</p></div></article>
-          <article class="menu-item"><span class="price">۳۲۹</span><div><h3>پیتزا مرغ بیکن</h3><p>مرغ، بیکن، پنیر، سس</p></div></article>
-          <article class="menu-item"><span class="price">۳۲۹</span><div><h3>پیتزا گوشت</h3><p>گوشت، قارچ، فلفل، پنیر</p></div></article>
-          <article class="menu-item"><span class="price">۳۲۹</span><div><h3>پیتزا مخلوط</h3><p>گوشت، مرغ، قارچ، پنیر</p></div></article>
-          <article class="menu-item"><span class="price">۳۲۹</span><div><h3>پیتزا سبزیجات</h3><p>قارچ، زیتون، ذرت، فلفل</p></div></article>
-          <article class="menu-item"><span class="price">۳۹۹</span><div><h3>پیتزا کنتاکی</h3><p>مرغ سوخاری، پنیر، سس</p></div></article>
-          <article class="menu-item"><span class="price">۳۹۹</span><div><h3>پیتزا ایتالیایی</h3><p>سس مخصوص، پنیر، سبزیجات</p></div></article>
-        </div>
-      </aside>
+    <section class="category" id="drink">
+      <h2>نوشیدنی</h2>
+      <div class="items">
+        <article class="item"><span class="price">۴۵</span><div><h3>نوشابه</h3><p>قوطی یا بطری</p></div></article>
+        <article class="item"><span class="price">۵۵</span><div><h3>آب معدنی</h3><p>بطری سرد</p></div></article>
+      </div>
     </section>
   </main>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const categories = document.querySelectorAll('.category');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.target;
+
+        tabs.forEach(t => t.classList.remove('active'));
+        categories.forEach(c => c.classList.remove('active'));
+
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        document.getElementById(target).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
 </body>
-              </html>
+</html>
