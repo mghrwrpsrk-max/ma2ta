@@ -200,3 +200,22 @@ h2{
 }
 
 }
+.search-box{
+    margin:30px auto;
+    max-width:500px;
+}
+
+#searchInput{
+    width:100%;
+    padding:16px;
+    background:#161616;
+    border:2px solid #d4af37;
+    border-radius:14px;
+    color:white;
+    font-size:18px;
+    outline:none;
+}
+
+#searchInput:focus{
+    box-shadow:0 0 15px #d4af37;
+}
