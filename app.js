@@ -1,87 +1,177 @@
-let menuData = {};
+// ===============================
+// MA2TA Restaurant
+// ===============================
 
-const menuItems = document.getElementById("menuItems");
-const categoryTitle = document.getElementById("categoryTitle");
-const menuBtn = document.getElementById("menuBtn");
+let menu = {};
 
+const menuContainer = document.getElementById("menu-items");
+const specialContainer = document.getElementById("special-items");
+
+// خواندن اطلاعات از menu.json
 fetch("menu.json")
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
-    menuData = data;
+
+    menu = data;
+
+    showSpecial();
+
   })
-  .catch(error => {
-    console.error("خطا در بارگذاری منو:", error);
-  });
+  .catch(err => {
 
-menuBtn.addEventListener("click", () => {
-  document.getElementById("categories").scrollIntoView({
-    behavior: "smooth"
-  });
-});
+    console.log(err);
 
-document.querySelectorAll(".category").forEach(button => {
-
-  button.addEventListener("click", () => {
-
-    const category = button.dataset.category;
-
-    showCategory(category, button.innerText);
+    menuContainer.innerHTML =
+      "<h2>خطا در بارگذاری منو</h2>";
 
   });
 
-});
+// ===============================
+// نمایش غذاهای ویژه
+// ===============================
 
-function showCategory(category, title) {
+function showSpecial() {
 
-  categoryTitle.innerText = title;
+    specialContainer.innerHTML="";
 
-  menuItems.innerHTML = "";
+    const special=[];
 
-  if (!menuData[category]) {
-    menuItems.innerHTML = "<p>موردی یافت نشد.</p>";
-    return;
-  }
+    Object.keys(menu).forEach(category=>{
 
-  menuData[category].forEach(item => {
+        if(menu[category].length){
 
-    menuItems.innerHTML += `
-      <div class="card">
-        <div class="card-content">
-          <h3>${item.name}</h3>
-          <div class="price">${item.price}</div>
-        </div>
-      </div>
-    `;
-
-  });
-
-  document.getElementById("menuSection").scrollIntoView({
-    behavior: "smooth"
-  });
-
-}
-const searchInput = document.getElementById("searchInput");
-
-searchInput.addEventListener("input", () => {
-
-    const value = searchInput.value.toLowerCase();
-
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach(card => {
-
-        const text = card.innerText.toLowerCase();
-
-        if(text.includes(value)){
-
-            card.style.display="block";
-
-        }else{
-
-            card.style.display="none";
+            special.push(menu[category][0]);
 
         }
 
     });
 
+    special.forEach(food=>{
+
+        specialContainer.innerHTML+=`
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <h3>${food.name}</h3>
+
+                <p>پیشنهاد ویژه MA②TA</p>
+
+                <div class="price">${food.price}</div>
+
+                <a class="order-btn">
+                مشاهده
+                </a>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+// ===============================
+// نمایش هر دسته
+// ===============================
+
+document.querySelectorAll(".category")
+
+.forEach(card=>{
+
+card.onclick=()=>{
+
+const category=card.dataset.category;
+
+showCategory(category);
+
+};
+
 });
+
+function showCategory(category){
+
+menuContainer.innerHTML="";
+
+if(!menu[category]) return;
+
+menu[category].forEach(food=>{
+
+menuContainer.innerHTML+=`
+
+<div class="card">
+
+<div class="card-body">
+
+<h3>${food.name}</h3>
+
+<p>
+
+تازه • خوشمزه • مخصوص MA②TA
+
+</p>
+
+<div class="price">
+
+${food.price}
+
+</div>
+
+<a class="order-btn">
+
+مشاهده
+
+</a>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("menu")
+
+.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+// ===============================
+// دکمه بازگشت بالا
+// ===============================
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
