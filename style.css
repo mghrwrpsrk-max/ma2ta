@@ -7,8 +7,8 @@
 }
 
 body {
-    background-color: #0b0b0b; /* پس زمینه مشکی عمیق */
-    color: #dfba6b; /* رنگ طلایی متن‌ها */
+    background-color: #0b0b0b; /* رنگ پس‌زمینه مشکی کل صفحه */
+    color: #dfba6b; /* رنگ متن طلایی */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ body {
     box-shadow: 0 0 20px rgba(223, 186, 107, 0.1);
 }
 
-/* بخش سمت چپ */
+/* بخش سمت چپ (لوگو و QR) */
 .left-section {
     flex: 1;
     display: flex;
@@ -41,6 +41,7 @@ body {
 
 .logo-area {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .brand-name {
@@ -66,6 +67,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     background: rgba(223, 186, 107, 0.05);
+    margin-bottom: 20px;
 }
 
 .scan-text {
@@ -90,7 +92,7 @@ body {
     letter-spacing: 2px;
 }
 
-/* بخش سمت راست (دکمه‌های دسته‌بندی) */
+/* بخش سمت راست (دسته‌بندی‌ها) */
 .right-section {
     flex: 1.2;
     display: flex;
@@ -123,11 +125,13 @@ body {
 
 .item-text {
     flex-grow: 1;
+    text-align: right;
 }
 
 .item-text h3 {
     font-size: 1rem;
     margin-bottom: 3px;
+    color: #dfba6b;
 }
 
 .item-text p {
@@ -140,19 +144,32 @@ body {
     opacity: 0.7;
 }
 
-/* واکنش‌گرایی برای موبایل */
+/* کدهای واکنش‌گرایی مخصوص موبایل */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
     .menu-container {
         flex-direction: column;
+        padding: 20px 15px;
     }
+    
     .left-section {
         border-left: none;
         border-bottom: 1px solid rgba(223, 186, 107, 0.3);
         padding-left: 0;
-        padding-bottom: 30px;
-        margin-bottom: 30px;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        width: 100%;
     }
+    
     .right-section {
         padding-right: 0;
+        width: 100%;
+    }
+
+    .menu-item {
+        padding: 10px;
     }
 }
