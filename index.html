@@ -3,189 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فست فود مادوتا | منوی دیجیتال ملکه</title>
+    <title>منوی دیجیتال فست فود مادوتا</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
-        body { font-family: 'Vazirmatn', sans-serif; background-color: #0b0b0b; }
-        .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%); }
-        .text-gold { color: #d4af37; }
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+        body { font-family: 'Vazirmatn', sans-serif; background-color: #0d0d0d; }
+        .active-main { background-color: #ff7300; color: #000; font-weight: bold; }
+        .active-sub { border-color: #ff7300; color: #ff7300; }
+        ::-webkit-scrollbar { display: none; } /* مخفی کردن اسکرول‌بار برای زیبایی در گوشی */
     </style>
 </head>
-<body class="text-gray-200 min-h-screen flex flex-col justify-between">
+<body class="text-gray-200 min-h-screen pb-20">
 
-    <header class="border-b border-gray-800 bg-black/80 backdrop-blur-md sticky top-0 z-50 px-4 py-3">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <span class="gold-gradient text-black font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl text-xl">مادوتا</span>
-                <span class="text-white text-xs tracking-widest hidden sm:inline">FAST FOOD</span>
-            </div>
-            <div class="text-xs text-gray-400">
-                <i class="fa-solid fa-phone text-gold ml-1"></i> ۳۳۳۰۰۸۸۸ - ۳۳۳۳۱۴۵۶
-            </div>
+    <header class="bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800 sticky top-0 z-50 p-4 flex justify-between items-center">
+        <div>
+            <h1 class="text-xl font-bold text-orange-500">فست فود مادوتا</h1>
+            <p class="text-[10px] text-gray-400">تلفن: ۳۳۳۰۰۸۸۸ - ۳۳۳۳۱۴۵۶</p>
+        </div>
+        <div class="flex gap-3 text-sm text-gray-400">
+            <a href="https://instagram.com/MA2TA.TBZ"><i class="fa-brands fa-instagram text-xl hover:text-orange-500"></i></a>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-8 space-y-16">
+    <div class="sticky top-[73px] z-40 bg-zinc-900 border-b border-zinc-800 p-2 overflow-x-auto flex gap-2 no-scrollbar">
+        <button onclick="switchCategory('pizza')" id="btn-pizza" class="active-main px-4 py-2 rounded-full text-xs shrink-0 transition-all">🍕 پیتزا</button>
+        <button onclick="switchCategory('sandwich')" id="btn-sandwich" class="bg-zinc-800 text-gray-300 px-4 py-2 rounded-full text-xs shrink-0 transition-all">🥪 ساندویچ</button>
+        <button onclick="switchCategory('fried')" id="btn-fried" class="bg-zinc-800 text-gray-300 px-4 py-2 rounded-full text-xs shrink-0 transition-all">🍗 سوخاری</button>
+        <button onclick="switchCategory('appetizer')" id="btn-appetizer" class="bg-zinc-800 text-gray-300 px-4 py-2 rounded-full text-xs shrink-0 transition-all">🍟 پیش غذا</button>
+        <button onclick="switchCategory('drinks')" id="btn-drinks" class="bg-zinc-800 text-gray-300 px-4 py-2 rounded-full text-xs shrink-0 transition-all">🥤 نوشیدنی</button>
+    </div>
+
+    <div id="sub-categories" class="sticky top-[125px] z-35 bg-zinc-950 border-b border-zinc-900 px-4 py-2 overflow-x-auto flex gap-4 text-xs text-gray-400">
+        </div>
+
+    <main class="max-w-xl mx-auto p-4 mt-4 space-y-8" id="menu-container">
         
-        <section>
-            <div class="text-center mb-8">
-                <h2 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-pizza-slice text-gold ml-2"></i>منوی پیتزا مادوتا</h2>
-                <p class="text-xs text-gray-400">در ۴ سایز و سبک مختلف</p>
-                <div class="w-24 h-0.5 gold-gradient mx-auto mt-2"></div>
-            </div>
-
-            <div class="space-y-12">
-                <div>
-                    <h3 class="text-lg font-bold text-gold mb-4 border-r-4 border-gold pr-2">پیتزا ایتالیایی</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                            <h4 class="font-bold text-white">پیتزا استیک</h4>
-                            <p class="text-xs text-gray-400 mt-1">استیک، پنیر پیتزا، زیتون، فلفل دلمه، گوجه گیلاسی، قارچ</p>
-                        </div>
-                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                            <h4 class="font-bold text-white">پیتزا بیکن</h4>
-                            <p class="text-xs text-gray-400 mt-1">بیکن، پنیر پیتزا، زیتون، فلفل دلمه، گوجه گیلاسی، قارچ</p>
-                        </div>
-                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                            <h4 class="font-bold text-white">پیتزا پپرونی</h4>
-                            <p class="text-xs text-gray-400 mt-1">پپرونی، پنیر پیتزا، زیتون، فلفل دلمه، گوجه گیلاسی، قارچ</p>
-                        </div>
-                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                            <h4 class="font-bold text-white">پیتزا سوچوگ</h4>
-                            <p class="text-xs text-gray-400 mt-1">سوچوگ، پنیر پیتزا، زیتون، فلفل دلمه، گوجه گیلاسی، قارچ</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-bold text-gold mb-4 border-r-4 border-gold pr-2">پیتزاهای کلاسیک (نیم متری / دونفره / مینی)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                            <h4 class="font-bold text-white">پیتزا مخصوص سرآشپز مادوتا</h4>
-                            <p class="text-xs text-gray-400 mt-1">ژامبون گوشت، مرغ، گوشت، سوچوگ، قارچ، فلفل دلمه، زیتون، گوجه فرنگی، پنیر، سس مخصوص</p>
-                        </div>
-                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                            <h4 class="font-bold text-white">پیتزا رست بیف</h4>
-                            <p class="text-xs text-gray-400 mt-1">رست بیف، پنیر، قارچ، فلفل دلمه، زیتون، گوجه فرنگی، سس مخصوص</p>
-                        </div>
-                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                            <h4 class="font-bold text-white">پیتزا گوشت و مرغ</h4>
-                            <p class="text-xs text-gray-400 mt-1">گوشت، مرغ، کالباس، پنیر، فلفل دلمه، گوجه فرنگی، زیتون</p>
-                        </div>
-                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                            <h4 class="font-bold text-white">پیتزا مخلوط</h4>
-                            <p class="text-xs text-gray-400 mt-1">کالباس، پنیر، قارچ، فلفل دلمه، سوسیس، گوجه فرنگی</p>
-                        </div>
+        <div id="cat-pizza" class="menu-section space-y-8">
+            
+            <div id="sub-pizza-half" class="space-y-3 scroll-mt-36">
+                <h3 class="text-orange-500 font-bold text-sm border-r-2 border-orange-500 pr-2">پیتزا نیم متری</h3>
+                <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold text-sm">پیتزا مخصوص سرآشپز مادوتا (نیم متری)</h4>
+                        <p class="text-[11px] text-gray-400 mt-1">ژامبون گوشت، مرغ، گوشت، سوچوگ، قارچ، فلفل دلمه</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section>
-            <div class="text-center mb-8">
-                <h2 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-bread-slice text-gold ml-2"></i>ساندویچ‌های غول نیم متری</h2>
-                <div class="w-24 h-0.5 gold-gradient mx-auto mt-2"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                    <h4 class="font-bold text-white">هات داگ نیم متری مخصوص مادودا</h4>
-                    <p class="text-xs text-gray-400 mt-1">برگر، هات داگ، مغز فیله، ۲ عدد ژامبون، ۴ عدد پنیر، قارچ</p>
-                </div>
-                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                    <h4 class="font-bold text-white">هات داگ نیم متری رویال</h4>
-                    <p class="text-xs text-gray-400 mt-1">برگر، هات داگ، ژامبون، ۴ عدد پنیر، قارچ</p>
-                </div>
-                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                    <h4 class="font-bold text-white">ساندویچ نیم متری بندری ویژه</h4>
-                    <p class="text-xs text-gray-400 mt-1">بندری مخصوص، پنیر پیتزا، پنیر گودا</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="text-center mb-8">
-                <h2 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-hamburger text-gold ml-2"></i>برگرهای دست‌ساز</h2>
-                <div class="w-24 h-0.5 gold-gradient mx-auto mt-2"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                    <h4 class="font-bold text-white">شف برگر</h4>
-                    <p class="text-xs text-gray-400 mt-1">برگر، مغز فیله، ۲ عدد پیرونی سوچوگ، پنیر گودا</p>
-                </div>
-                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                    <h4 class="font-bold text-white">سوپر بیگ چاید</h4>
-                    <p class="text-xs text-gray-400 mt-1">برگر دبل، ۲ عدد ژامبون، ۳ عدد پنیر، کوکتل، قارچ، پنیر گودا، ته دیگ پنیری</p>
-                </div>
-                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                    <h4 class="font-bold text-white">سوجوق برگر</h4>
-                    <p class="text-xs text-gray-400 mt-1">برگر، سوجوق، پنیر پیتزا</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-                <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-fire text-gold ml-2"></i>دنر کباب</h3>
-                <div class="space-y-3">
-                    <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                        <h4 class="font-bold text-white">ساندویچ دونر گوشت</h4>
-                        <p class="text-xs text-gray-400 mt-1">۱۵۰ گرم دونر گوشت، پیاز، قارچ، خیارشور، کاهو، گوجه</p>
-                    </div>
-                    <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                        <h4 class="font-bold text-white">پیتزا دونر مرغ</h4>
-                        <p class="text-xs text-gray-400 mt-1">دونر مرغ، پنیر پیتزا، قارچ، سس مخصوص، فلفل دلمه</p>
+            <div id="sub-pizza-medium" class="space-y-3 scroll-mt-36">
+                <h3 class="text-orange-500 font-bold text-sm border-r-2 border-orange-500 pr-2">پیتزا متوسط (دونفره)</h3>
+                <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold text-sm">پیتزا رست بیف متوسط</h4>
+                        <p class="text-[11px] text-gray-400 mt-1">رست بیف، پنیر، قارچ، فلفل دلمه، سس مخصوص</p>
                     </div>
                 </div>
             </div>
-            <div>
-                <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-hotdog text-gold ml-2"></i>ساندویچ</h3>
-                <div class="space-y-3">
-                    <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                        <h4 class="font-bold text-white">رست بیف کواک</h4>
-                        <p class="text-xs text-gray-400 mt-1">۲۰۰ گرم گوشت رست بیف، خیارشور، کاهو، گوجه، خلال</p>
-                    </div>
-                    <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
-                        <h4 class="font-bold text-white">بندری مخصوص</h4>
-                        <p class="text-xs text-gray-400 mt-1">۲۰۰ گرم بندری مخصوص، خیارشور، کاهو، گوجه، خلال</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div>
-                <h3 class="text-lg font-bold text-gold mb-4">پاستا</h3>
-                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800 space-y-2">
-                    <h4 class="font-bold text-white">پاستا پنه چیکن</h4>
-                    <p class="text-xs text-gray-400">مغز فیله، پاستا پنه، پنیر پارمسان، زیتون، قارچ، شیر، خامه، گوجه گیلاسی</p>
+            <div id="sub-pizza-mini" class="space-y-3 scroll-mt-36">
+                <h3 class="text-orange-500 font-bold text-sm border-r-2 border-orange-500 pr-2">پیتزا مینی</h3>
+                <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold text-sm">پیتزا مخلوط مینی</h4>
+                        <p class="text-[11px] text-gray-400 mt-1">کالباس، پنیر، قارچ، سوسیس، فلفل دلمه</p>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h3 class="text-lg font-bold text-gold mb-4">سوخاری</h3>
-                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800 space-y-2 text-xs text-gray-300">
-                    <p>فیله سوخاری</p>
-                    <p>قارچ سوخاری</p>
-                    <p>پیاز سوخاری / بال و کتف</p>
+
+            <div id="sub-pizza-italian" class="space-y-3 scroll-mt-36">
+                <h3 class="text-orange-500 font-bold text-sm border-r-2 border-orange-500 pr-2">پیتزا ایتالیایی</h3>
+                <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold text-sm">پیتزا استیک ایتالیایی</h4>
+                        <p class="text-[11px] text-gray-400 mt-1">استیک، پنیر پیتزا، زیتون، فلفل دلمه، گوجه گیلاسی</p>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h3 class="text-lg font-bold text-gold mb-4">سیب زمینی و پیش غذا</h3>
-                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800 space-y-2 text-xs text-gray-300">
-                    <p class="font-bold text-white">سیب زمینی پنیری مادودا</p>
-                    <p>نان سیر با سس مخصوص</p>
-                    <p>سالاد سزار و سالاد پاستا</p>
-                </div>
+        </div>
+
+        <div id="cat-sandwich" class="menu-section hidden space-y-4">
+            <h3 class="text-orange-500 font-bold text-sm border-r-2 border-orange-500 pr-2">ساندویچ‌های غول و کلاسیک</h3>
+            <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl">
+                <h4 class="font-bold text-sm">هات داگ نیم متری مخصوص</h4>
+                <p class="text-[11px] text-gray-400 mt-1">برگر، هات داگ، مغز فیله، ۲ عدد ژامبون، ۴ عدد پنیر، قارچ</p>
             </div>
-        </section>
+            <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl">
+                <h4 class="font-bold text-sm">شف برگر</h4>
+                <p class="text-[11px] text-gray-400 mt-1">برگر، مغز فیله، ۲ عدد پپرونی سوچوگ، پنیر گودا</p>
+            </div>
+        </div>
+
+        <div id="cat-fried" class="menu-section hidden space-y-4">
+            <h3 class="text-orange-500 font-bold text-sm border-r-2 border-orange-500 pr-2">سوخاری کرانچی</h3>
+            <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl">
+                <h4 class="font-bold text-sm">فیله سوخاری ۴ تکه</h4>
+                <p class="text-[11px] text-gray-400 mt-1">فیله مرغ مرینیت شده، سیب زمینی، سس مخصوص</p>
+            </div>
+        </div>
+
+        <div id="cat-appetizer" class="menu-section hidden space-y-4">
+            <h3 class="text-orange-500 font-bold text-sm border-r-2 border-orange-500 pr-2">پیش غذا و سالاد</h3>
+            <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl">
+                <h4 class="font-bold text-sm">سیب زمینی پنیری مادوتا</h4>
+                <p class="text-[11px] text-gray-400 mt-1">سیب زمینی سرخ شده، قارچ، ژامبون، فلفل دلمه، پنیر پیتزا</p>
+            </div>
+        </div>
+
+        <div id="cat-drinks" class="menu-section hidden space-y-4">
+            <h3 class="text-orange-500 font-bold text-sm border-r-2 border-orange-500 pr-2">نوشیدنی‌ها</h3>
+            <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl">
+                <h4 class="font-bold text-sm">نوشابه قوطی / دلستر</h4>
+            </div>
+        </div>
 
     </main>
 
-    <footer class="bg-black border-t border-gray-900 py-6 px-4 text-center text-xs text-gray-500">
-        <p>آدرس اینستاگرام ما: @MA2TA.TBZ</p>
-        <p class="mt-2">© 2026 فست فود مادوتا. طراحی شده در قالبVIP گیت‌هاب</p>
-    </footer>
+    <script>
+        // تعریف زیردسته‌ها برای هر دسته اصلی
+        const subData = {
+            pizza: [
+                { id: 'sub-pizza-half', name: 'نیم متری' },
+                { id: 'sub-pizza-medium', name: 'متوسط (دونفره)' },
+                { id: 'sub-pizza-mini', name: 'مینی' },
+                { id: 'sub-pizza-italian', name: 'ایتالیایی' }
+            ],
+            sandwich: [],
+            fried: [],
+            appetizer: [],
+            drinks: []
+        };
 
+        function switchCategory(catKey) {
+            // ۱. تغییر استایل دکمه‌های اصلی
+            const mainButtons = ['pizza', 'sandwich', 'fried', 'appetizer', 'drinks'];
+            mainButtons.forEach(key => {
+                const btn = document.getElementById(`btn-${key}`);
+                if(key === catKey) {
+                    btn.className = "active-main px-4 py-2 rounded-full text-xs shrink-0 transition-all";
+                } else {
+                    btn.className = "bg-zinc-800 text-gray-300 px-4 py-2 rounded-full text-xs shrink-0 transition-all";
+                }
+            });
+
+            // ۲. نمایش بخش مربوطه و مخفی کردن بقیه
+            mainButtons.forEach(key => {
+                const section = document.getElementById(`cat-${key}`);
+                if(key === catKey) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+
+            // ۳. رندر کردن زیردسته‌ها در بالای صفحه
+            const subContainer = document.getElementById('sub-categories');
+            subContainer.innerHTML = ''; // پاک کردن قبلی‌ها
+
+            if(subData[catKey].length > 0) {
+                subContainer.classList.remove('hidden');
+                subData[catKey].forEach(sub => {
+                    const subBtn = document.createElement('button');
+                    subBtn.textContent = sub.name;
+                    subBtn.className = "pb-1 border-b-2 border-transparent hover:text-orange-500 transition-all shrink-0";
+                    subBtn.onclick = () => {
+                        document.getElementById(sub.id).scrollIntoView({ behavior: 'smooth' });
+                    };
+                    subContainer.appendChild(subBtn);
+                });
+            } else {
+                subContainer.classList.add('hidden');
+            }
+        }
+
+        // اجرای اولیه برای بخش پیتزا در هنگام لود شدن صفحه
+        window.onload = () => {
+            switchCategory('pizza');
+        };
+    </script>
 </body>
 </html>
