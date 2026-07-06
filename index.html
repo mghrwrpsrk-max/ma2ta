@@ -1,205 +1,191 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ماژتا | منوی دیجیتال</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فست فود مادوتا | منوی دیجیتال ملکه</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
+        body { font-family: 'Vazirmatn', sans-serif; background-color: #0b0b0b; }
+        .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%); }
+        .text-gold { color: #d4af37; }
+    </style>
 </head>
-<body>
-  <main class="page">
-    <section class="hero">
-      <header class="brand brand-center">
-        <h1>Ma2Ta</h1>
-      </header>
+<body class="text-gray-200 min-h-screen flex flex-col justify-between">
 
-      <div class="hero-grid">
-        <aside class="side left">
-          <div class="glass phone-box">
-            <div>☎ ۲۲۳۰۰۸۸۸</div>
-            <div>☎ ۲۲۲۳۱۴۵۶</div>
-          </div>
-        </aside>
+    <header class="border-b border-gray-800 bg-black/80 backdrop-blur-md sticky top-0 z-50 px-4 py-3">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="gold-gradient text-black font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl text-xl">مادوتا</span>
+                <span class="text-white text-xs tracking-widest hidden sm:inline">FAST FOOD</span>
+            </div>
+            <div class="text-xs text-gray-400">
+                <i class="fa-solid fa-phone text-gold ml-1"></i> ۳۳۳۰۰۸۸۸ - ۳۳۳۳۱۴۵۶
+            </div>
+        </div>
+    </header>
 
-        <section class="center">
-          <img class="hero-img" src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=1500&q=80" alt="burger" />
+    <main class="max-w-6xl mx-auto px-4 py-8 space-y-16">
+        
+        <section>
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-pizza-slice text-gold ml-2"></i>منوی پیتزا مادوتا</h2>
+                <p class="text-xs text-gray-400">در ۴ سایز و سبک مختلف</p>
+                <div class="w-24 h-0.5 gold-gradient mx-auto mt-2"></div>
+            </div>
+
+            <div class="space-y-12">
+                <div>
+                    <h3 class="text-lg font-bold text-gold mb-4 border-r-4 border-gold pr-2">پیتزا ایتالیایی</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                            <h4 class="font-bold text-white">پیتزا استیک</h4>
+                            <p class="text-xs text-gray-400 mt-1">استیک، پنیر پیتزا، زیتون، فلفل دلمه، گوجه گیلاسی، قارچ</p>
+                        </div>
+                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                            <h4 class="font-bold text-white">پیتزا بیکن</h4>
+                            <p class="text-xs text-gray-400 mt-1">بیکن، پنیر پیتزا، زیتون، فلفل دلمه، گوجه گیلاسی، قارچ</p>
+                        </div>
+                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                            <h4 class="font-bold text-white">پیتزا پپرونی</h4>
+                            <p class="text-xs text-gray-400 mt-1">پپرونی، پنیر پیتزا، زیتون، فلفل دلمه، گوجه گیلاسی، قارچ</p>
+                        </div>
+                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                            <h4 class="font-bold text-white">پیتزا سوچوگ</h4>
+                            <p class="text-xs text-gray-400 mt-1">سوچوگ، پنیر پیتزا، زیتون، فلفل دلمه، گوجه گیلاسی، قارچ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-gold mb-4 border-r-4 border-gold pr-2">پیتزاهای کلاسیک (نیم متری / دونفره / مینی)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                            <h4 class="font-bold text-white">پیتزا مخصوص سرآشپز مادوتا</h4>
+                            <p class="text-xs text-gray-400 mt-1">ژامبون گوشت، مرغ، گوشت، سوچوگ، قارچ، فلفل دلمه، زیتون، گوجه فرنگی، پنیر، سس مخصوص</p>
+                        </div>
+                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                            <h4 class="font-bold text-white">پیتزا رست بیف</h4>
+                            <p class="text-xs text-gray-400 mt-1">رست بیف، پنیر، قارچ، فلفل دلمه، زیتون، گوجه فرنگی، سس مخصوص</p>
+                        </div>
+                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                            <h4 class="font-bold text-white">پیتزا گوشت و مرغ</h4>
+                            <p class="text-xs text-gray-400 mt-1">گوشت، مرغ، کالباس، پنیر، فلفل دلمه، گوجه فرنگی، زیتون</p>
+                        </div>
+                        <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                            <h4 class="font-bold text-white">پیتزا مخلوط</h4>
+                            <p class="text-xs text-gray-400 mt-1">کالباس، پنیر، قارچ، فلفل دلمه، سوسیس، گوجه فرنگی</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <aside class="side right">
-          <div class="glass feature-box">
-            <div>طراحی لوکس</div>
-            <div>انیمیشن زنده</div>
-          </div>
-        </aside>
-      </div>
-    </section>
+        <section>
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-bread-slice text-gold ml-2"></i>ساندویچ‌های غول نیم متری</h2>
+                <div class="w-24 h-0.5 gold-gradient mx-auto mt-2"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                    <h4 class="font-bold text-white">هات داگ نیم متری مخصوص مادودا</h4>
+                    <p class="text-xs text-gray-400 mt-1">برگر، هات داگ، مغز فیله، ۲ عدد ژامبون، ۴ عدد پنیر، قارچ</p>
+                </div>
+                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                    <h4 class="font-bold text-white">هات داگ نیم متری رویال</h4>
+                    <p class="text-xs text-gray-400 mt-1">برگر، هات داگ، ژامبون، ۴ عدد پنیر، قارچ</p>
+                </div>
+                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                    <h4 class="font-bold text-white">ساندویچ نیم متری بندری ویژه</h4>
+                    <p class="text-xs text-gray-400 mt-1">بندری مخصوص، پنیر پیتزا، پنیر گودا</p>
+                </div>
+            </div>
+        </section>
 
-    <nav class="tabs">
-      <button class="tab active" data-target="pizza-half">پیتزا نیم</button>
-      <button class="tab" data-target="pizza-medium">پیتزا متوسط</button>
-      <button class="tab" data-target="pizza-mini">پیتزا مینی</button>
-      <button class="tab" data-target="sandwich">ساندویچ</button>
-      <button class="tab" data-target="doner">دونر</button>
-      <button class="tab" data-target="potato">سیب زمینی</button>
-      <button class="tab" data-target="starter">پیش‌غذا</button>
-      <button class="tab" data-target="italian">پیتزا ایتالیایی</button>
-      <button class="tab" data-target="fried">سوخاری</button>
-    </nav>
+        <section>
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-hamburger text-gold ml-2"></i>برگرهای دست‌ساز</h2>
+                <div class="w-24 h-0.5 gold-gradient mx-auto mt-2"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                    <h4 class="font-bold text-white">شف برگر</h4>
+                    <p class="text-xs text-gray-400 mt-1">برگر، مغز فیله، ۲ عدد پیرونی سوچوگ، پنیر گودا</p>
+                </div>
+                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                    <h4 class="font-bold text-white">سوپر بیگ چاید</h4>
+                    <p class="text-xs text-gray-400 mt-1">برگر دبل، ۲ عدد ژامبون، ۳ عدد پنیر، کوکتل، قارچ، پنیر گودا، ته دیگ پنیری</p>
+                </div>
+                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                    <h4 class="font-bold text-white">سوجوق برگر</h4>
+                    <p class="text-xs text-gray-400 mt-1">برگر، سوجوق، پنیر پیتزا</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="category active" id="pizza-half">
-      <div class="section-head"><h2>پیتزا نیم‌متری</h2><span>Half meter</span></div>
-      <div class="cards">
-        <article class="food-card tilt"><span class="price">۹۹۰</span><h3>پیتزا مخصوص سر آشپز مادوتا</h3><p>فلفل دلمه + زیتون + گوجه فرنگی + پنیر + سس مخصوص + ژامبون گوشت + مرغ و گوشت + سوجوک + قارچ</p></article>
-        <article class="food-card tilt"><span class="price">۸۹۰</span><h3>پیتزا مخصوص مادوتا</h3><p>گوشت و مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۸۹۰</span><h3>پیتزا رست بیف</h3><p>رست بیف + پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۸۹۰</span><h3>پیتزا بیف</h3><p>پنیر + قارچ + گوشت + سس مخصوص + فلفل دلمه + گوجه فرنگی + زیتون + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۷۷۰</span><h3>پیتزا گوشت</h3><p>پنیر + قارچ + گوشت + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۷۳۹</span><h3>پیتزا مرغ</h3><p>گوشت + مرغ + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۸۱۹</span><h3>پیتزا گوشت و مرغ</h3><p>گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۸۹۰</span><h3>پیتزا چهار فصل</h3><p>گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۸۷۹</span><h3>پیتزا سوجوق</h3><p>پنیر + فلفل دلمه + زیتون + گوجه فرنگی + سوجوق و سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۸۷۹</span><h3>پیتزا پپرونی</h3><p>پنیر + قارچ + پپرونی + فلفل دلمه + گوجه فرنگی + زیتون + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۸۷۹</span><h3>پیتزا مکزیکی</h3><p>پنیر + قارچ + پپرونی پودر پابریکا + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۴۹۹</span><h3>پیتزا مخلوط</h3><p>کالباس + پنیر + قارچ + فلفل دلمه + سوسیس + گوجه فرنگی</p></article>
-        <article class="food-card tilt"><span class="price">۴۹۹</span><h3>پیتزا سبزیجات</h3><p>پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + پودر نخود فرنگی + جعفری + سس مخصوص</p></article>
-      </div>
-    </section>
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-fire text-gold ml-2"></i>دنر کباب</h3>
+                <div class="space-y-3">
+                    <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                        <h4 class="font-bold text-white">ساندویچ دونر گوشت</h4>
+                        <p class="text-xs text-gray-400 mt-1">۱۵۰ گرم دونر گوشت، پیاز، قارچ، خیارشور، کاهو، گوجه</p>
+                    </div>
+                    <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                        <h4 class="font-bold text-white">پیتزا دونر مرغ</h4>
+                        <p class="text-xs text-gray-400 mt-1">دونر مرغ، پنیر پیتزا، قارچ، سس مخصوص، فلفل دلمه</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-hotdog text-gold ml-2"></i>ساندویچ</h3>
+                <div class="space-y-3">
+                    <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                        <h4 class="font-bold text-white">رست بیف کواک</h4>
+                        <p class="text-xs text-gray-400 mt-1">۲۰۰ گرم گوشت رست بیف، خیارشور، کاهو، گوجه، خلال</p>
+                    </div>
+                    <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800">
+                        <h4 class="font-bold text-white">بندری مخصوص</h4>
+                        <p class="text-xs text-gray-400 mt-1">۲۰۰ گرم بندری مخصوص، خیارشور، کاهو، گوجه، خلال</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="category" id="pizza-medium">
-      <div class="section-head"><h2>پیتزا متوسط</h2><span>Medium</span></div>
-      <div class="cards">
-        <article class="food-card tilt"><span class="price">۶۵۹</span><h3>پیتزا مخصوص سر آشپز مادوتا</h3><p>فلفل دلمه + زیتون + گوجه فرنگی + پنیر + سس مخصوص + ژامبون گوشت + مرغ و گوشت + سوجوق + قارچ</p></article>
-        <article class="food-card tilt"><span class="price">۵۹۹</span><h3>پیتزا مخصوص مادوتا</h3><p>گوشت و مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۵۹۹</span><h3>پیتزا رست بیف</h3><p>رست بیف + پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۵۵۹</span><h3>پیتزا بیف</h3><p>پنیر + قارچ + گوشت + سس مخصوص + فلفل دلمه + گوجه فرنگی + زیتون + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۵۴۹</span><h3>پیتزا گوشت</h3><p>پنیر + قارچ + گوشت + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۵۳۹</span><h3>پیتزا مرغ</h3><p>گوشت + مرغ + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۵۹۹</span><h3>پیتزا گوشت و مرغ</h3><p>گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۵۹۹</span><h3>پیتزا چهار فصل</h3><p>گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۵۹۹</span><h3>پیتزا سوجوق</h3><p>پنیر + فلفل دلمه + زیتون + گوجه فرنگی + سوجوق و سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۵۹۹</span><h3>پیتزا پپرونی</h3><p>پنیر + قارچ + پپرونی + فلفل دلمه + گوجه فرنگی + زیتون + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۵۹۹</span><h3>پیتزا مکزیکی</h3><p>پنیر + قارچ + پپرونی پودر پابریکا + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۳۷۹</span><h3>پیتزا مخلوط</h3><p>کالباس + پنیر + قارچ + فلفل دلمه + سوسیس + گوجه فرنگی</p></article>
-        <article class="food-card tilt"><span class="price">۳۷۹</span><h3>پیتزا سبزیجات</h3><p>پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + پودر نخود فرنگی + جعفری + سس مخصوص</p></article>
-      </div>
-    </section>
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <h3 class="text-lg font-bold text-gold mb-4">پاستا</h3>
+                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800 space-y-2">
+                    <h4 class="font-bold text-white">پاستا پنه چیکن</h4>
+                    <p class="text-xs text-gray-400">مغز فیله، پاستا پنه، پنیر پارمسان، زیتون، قارچ، شیر، خامه، گوجه گیلاسی</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-gold mb-4">سوخاری</h3>
+                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800 space-y-2 text-xs text-gray-300">
+                    <p>فیله سوخاری</p>
+                    <p>قارچ سوخاری</p>
+                    <p>پیاز سوخاری / بال و کتف</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-gold mb-4">سیب زمینی و پیش غذا</h3>
+                <div class="bg-zinc-900/50 p-4 rounded-xl border border-gray-800 space-y-2 text-xs text-gray-300">
+                    <p class="font-bold text-white">سیب زمینی پنیری مادودا</p>
+                    <p>نان سیر با سس مخصوص</p>
+                    <p>سالاد سزار و سالاد پاستا</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="category" id="pizza-mini">
-      <div class="section-head"><h2>پیتزا مینی</h2><span>Mini</span></div>
-      <div class="cards">
-        <article class="food-card tilt"><span class="price">۴۳۹</span><h3>پیتزا مخصوص سر آشپز مادوتا</h3><p>فلفل دلمه + زیتون + گوجه فرنگی + پنیر + سس مخصوص + ژامبون گوشت + مرغ و گوشت + سوجوق + قارچ</p></article>
-        <article class="food-card tilt"><span class="price">۴۳۹</span><h3>پیتزا مخصوص مادوتا</h3><p>گوشت و مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۴۳۹</span><h3>پیتزا رست بیف</h3><p>رست بیف + پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۳۹۹</span><h3>پیتزا بیف</h3><p>پنیر + قارچ + گوشت + سس مخصوص + فلفل دلمه + گوجه فرنگی + زیتون + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۳۸۹</span><h3>پیتزا گوشت</h3><p>پنیر + قارچ + گوشت + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۳۷۹</span><h3>پیتزا مرغ</h3><p>گوشت + مرغ + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۳۹۹</span><h3>پیتزا گوشت و مرغ</h3><p>گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۳۸۹</span><h3>پیتزا چهار فصل</h3><p>گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</p></article>
-        <article class="food-card tilt"><span class="price">۳۸۹</span><h3>پیتزا سوجوق</h3><p>پنیر + فلفل دلمه + زیتون + گوجه فرنگی + سوجوق و سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۳۸۹</span><h3>پیتزا پپرونی</h3><p>پنیر + قارچ + پپرونی + فلفل دلمه + گوجه فرنگی + زیتون + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۳۸۹</span><h3>پیتزا مکزیکی</h3><p>پنیر + قارچ + پپرونی پودر پابریکا + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</p></article>
-        <article class="food-card tilt"><span class="price">۲۹۹</span><h3>پیتزا مخلوط</h3><p>کالباس + پنیر + قارچ + فلفل دلمه + سوسیس + گوجه فرنگی</p></article>
-        <article class="food-card tilt"><span class="price">۲۹۹</span><h3>پیتزا سبزیجات</h3><p>پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + پودر نخود فرنگی + جعفری + سس مخصوص</p></article>
-      </div>
-    </section>
+    </main>
 
-    <section class="category" id="sandwich">
-      <div class="section-head"><h2>ساندویچ</h2><span>Sandwiches</span></div>
-      <div class="cards">
-        <article class="food-card tilt"><span class="price">۵۱۹</span><h3>رست بیف</h3><p>60 گرم گوشت رست بیف + قارچ + فلفل دلمه + خیارشور + کاهو + سس مخصوص + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۵۱۹</span><h3>فیله مرغ کبابی</h3><p>2 عدد فیله + قارچ + فلفل دلمه + کاهو + سس مخصوص + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۳۳۹</span><h3>هات داگ</h3><p>هات داگ + قارچ + فلفل دلمه + خیارشور + کاهو + سس مخصوص + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۳۳۹</span><h3>ژامبون</h3><p>2 عدد ژامبون گوشت + قارچ + فلفل دلمه + کاهو + سس مخصوص + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۲۹۹</span><h3>کوکتل</h3><p>2 عدد کوکتل + قارچ + فلفل دلمه + کاهو + سس مخصوص + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۲۳۹</span><h3>بندری مخصوص</h3><p>30 گرم بندری مخصوص + گوجه + کاهو + سس مخصوص + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۱۹۹</span><h3>فلافل</h3><p>6 عدد فلافل + خیارشور + کاهو + سس مخصوص + خلال</p></article>
-      </div>
-    </section>
+    <footer class="bg-black border-t border-gray-900 py-6 px-4 text-center text-xs text-gray-500">
+        <p>آدرس اینستاگرام ما: @MA2TA.TBZ</p>
+        <p class="mt-2">© 2026 فست فود مادوتا. طراحی شده در قالبVIP گیت‌هاب</p>
+    </footer>
 
-    <section class="category" id="doner">
-      <div class="section-head"><h2>دونر</h2><span>Doner</span></div>
-      <div class="cards">
-        <article class="food-card tilt"><span class="price">۵۱۹</span><h3>ساندویچ دونر گوشت</h3><p>150 گرم دونر گوشت + پیاز + گوجه + کاهو + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۴۵۹</span><h3>ساندویچ دونر مرغ</h3><p>150 گرم دونر مرغ + پیاز + گوجه + کاهو + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۵۳۹</span><h3>ساندویچ دونر گوشت و مرغ</h3><p>150 گرم دونر گوشت و مرغ + پیاز + گوجه + کاهو + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۶۳۹</span><h3>پیتزا دونر گوشت</h3><p>دونر گوشت + پنیر پیتزا + سس مخصوص + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۶۱۹</span><h3>پیتزا دونر مرغ</h3><p>دونر مرغ + پنیر پیتزا + سس مخصوص + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۶۵۹</span><h3>پیتزا دونر گوشت و مرغ</h3><p>دونر مخلوط + پنیر پیتزا + سس مخصوص + خلال</p></article>
-      </div>
-    </section>
-
-    <section class="category" id="potato">
-      <div class="section-head"><h2>سیب زمینی</h2><span>Side dishes</span></div>
-      <div class="cards">
-        <article class="food-card tilt"><span class="price">۱۷۵</span><h3>سیب زمینی تک نفره</h3><p>100 گرم سیب زمینی</p></article>
-        <article class="food-card tilt"><span class="price">۳۴۰</span><h3>سیب زمینی دو نفره</h3><p>200 گرم سیب زمینی</p></article>
-        <article class="food-card tilt"><span class="price">۲۹۰</span><h3>سیب زمینی پنیر تک نفره</h3><p>سیب زمینی + پنیر + زیتون + فلفل + خلال</p></article>
-        <article class="food-card tilt"><span class="price">۴۷۰</span><h3>سیب زمینی پنیر دو نفره</h3><p>سیب زمینی + پنیر + زیتون + فلفل + خلال</p></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>سیب زمینی مخصوص</h3><p>سیب زمینی + پنیر + فیله مرغ + ژامبون + قارچ + سس مخصوص + خلال</p></article>
-      </div>
-    </section>
-
-    <section class="category" id="starter">
-      <div class="section-head"><h2>پیش‌غذا</h2><span>Starter</span></div>
-      <div class="cards">
-        <article class="food-card tilt"><span class="price">—</span><h3>نان سیر</h3><p>نان سیر + خمیر پیتزا</p></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>سالاد سزار</h3><p>کاهو + خیار + سس سزار + پنیر پارمزان</p></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>سالاد پاستا</h3><p>ماکارونی + فلفل + ژامبون + خیار + سس</p></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>سالاد فصل</h3><p>کاهو + گوجه + خیار + فلفل + سس</p></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>سالاد کلم</h3><p>کلم + هویج + سس</p></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>سوپ خامه‌ای</h3><p>سوپ مخصوص + پنیر پیتزا + خلال</p></article>
-      </div>
-    </section>
-
-    <section class="category" id="italian">
-      <div class="section-head"><h2>پیتزا ایتالیایی</h2><span>Italian pizza</span></div>
-      <div class="cards">
-        <article class="food-card tilt"><span class="price">—</span><h3>استیک</h3><p>استیک + پیاز + فلفل دلمه + قارچ + پنیر پیتزا + خلال</p></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>پپرونی</h3><p>پپرونی + پنیر + فلفل دلمه + خلال</p></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>پیترو</h3><p>پیترو + پنیر + قارچ + فلفل دلمه + خلال</p></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>سوخاری</h3><p>سوخاری + پنیر + خلال</p></article>
-      </div>
-    </section>
-
-    <section class="category" id="fried">
-      <div class="section-head"><h2>سوخاری</h2><span>Crispy</span></div>
-      <div class="cards">
-        <article class="food-card tilt"><span class="price">—</span><h3>فیله سوخاری</h3></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>توک و تراک سوخاری</h3></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>قارچ سوخاری</h3></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>ران سوخاری</h3></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>پیاز سوخاری</h3></article>
-        <article class="food-card tilt"><span class="price">—</span><h3>بال و کتف</h3></article>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    const tabs = document.querySelectorAll('.tab');
-    const categories = document.querySelectorAll('.category');
-    tabs.forEach(tab => tab.addEventListener('click', () => {
-      const target = tab.dataset.target;
-      tabs.forEach(t => t.classList.remove('active'));
-      categories.forEach(c => c.classList.remove('active'));
-      tab.classList.add('active');
-      document.getElementById(target).classList.add('active');
-    }));
-    document.querySelectorAll('.tilt').forEach(card => {
-      card.addEventListener('mousemove', e => {
-        const r = card.getBoundingClientRect();
-        const x = e.clientX - r.left;
-        const y = e.clientY - r.top;
-        const rx = ((y - r.height / 2) / r.height) * -10;
-        const ry = ((x - r.width / 2) / r.width) * 10;
-        card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px) scale(1.03)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'rotateX(0) rotateY(0) translateY(0) scale(1)';
-      });
-    });
-  </script>
 </body>
 </html>
