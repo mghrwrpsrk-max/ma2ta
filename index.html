@@ -30,7 +30,7 @@
 
         <div class="right-section">
             
-            <div class="menu-wrapper main-category">
+            <div class="menu-wrapper">
                 <div class="menu-item" onclick="toggleMainMenu(this)">
                     <div class="item-icon">🍕</div>
                     <div class="item-text">
@@ -40,7 +40,7 @@
                     <span class="arrow">◀</span>
                 </div>
                 
-                <div class="submenu-items pizza-sizes">
+                <div class="submenu-items">
                     
                     <div class="size-wrapper">
                         <div class="size-header" onclick="toggleSizeMenu(this)">
@@ -121,7 +121,7 @@
                             <div class="sub-item">
                                 <div class="sub-info">
                                     <span class="sub-title">پیتزا مکزیکی</span>
-                                    <span class="sub-details">پنیر + قارچ + پپرونی + پودر پاپریکا + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</span>
+                                    <span class="sub-details">پنیر + قارچ + پپرونی + پودر پاپریکا + fلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</span>
                                 </div>
                                 <span class="sub-price">۸۷۹,۰۰۰ ت</span>
                             </div>
@@ -328,7 +328,7 @@
                             <div class="sub-item">
                                 <div class="sub-info">
                                     <span class="sub-title">پیتزا مخلوط</span>
-                                    <span class="sub-details">کالباس + پنیر + قارچ + فلفل دلمه + سوسیس + گوجه فرنگی</span>
+                                    <span class="sub-details">کالباس + پنیر + قارچ + fلفل دلمه + سوسیس + گوجه فرنگی</span>
                                 </div>
                                 <span class="sub-price">۲۹۹,۰۰۰ ت</span>
                             </div>
@@ -432,11 +432,9 @@
     </div>
 
     <script>
-        // باز و بسته کردن بخش اصلی پیتزا
         function toggleMainMenu(element) {
             const wrapper = element.parentElement;
             const isOpen = wrapper.classList.contains('active');
-            
             if (isOpen) {
                 wrapper.classList.remove('active');
             } else {
@@ -444,20 +442,15 @@
             }
         }
 
-        // باز و بسته کردن سایزهای پیتزا (نیم متری، متوسط و...)
         function toggleSizeMenu(element) {
             const wrapper = element.parentElement;
             const isOpen = wrapper.classList.contains('open');
-            
-            // بستن بقیه سایزها برای خلوت شدن منو
             const allSizes = wrapper.parentElement.querySelectorAll('.size-wrapper');
             allSizes.forEach(item => item.classList.remove('open'));
 
             if (!isOpen) {
                 wrapper.classList.add('open');
             }
-            
-            // جلوگیری از بسته شدن منوی اصلی با کلیک روی زیرمنوها
             event.stopPropagation();
         }
     </script>
