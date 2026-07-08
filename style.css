@@ -1,175 +1,137 @@
-/* تنظیمات پایه */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* --- استایل‌های اختصاصی آکاردئون تو در تو پیتزا --- */
 
-body {
-    background-color: #0b0b0b; /* رنگ پس‌زمینه مشکی کل صفحه */
-    color: #dfba6b; /* رنگ متن طلایی */
+.menu-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-}
-
-/* کانتینر اصلی منو */
-.menu-container {
-    display: flex;
-    max-width: 900px;
+    flex-direction: column;
     width: 100%;
-    background-color: #0d0d0d;
-    border: 2px solid #dfba6b;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 0 20px rgba(223, 186, 107, 0.1);
 }
 
-/* بخش سمت چپ (لوگو و QR) */
-.left-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-left: 1px solid rgba(223, 186, 107, 0.3);
-    padding-left: 20px;
-}
-
-.logo-area {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.brand-name {
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.brand-subtitle {
-    font-size: 0.8rem;
-    letter-spacing: 5px;
-    margin-bottom: 10px;
-}
-
-.slogan {
-    font-size: 0.85rem;
-    color: #fff;
-}
-
-.qr-box {
-    text-align: center;
-    border: 1px solid #dfba6b;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(223, 186, 107, 0.05);
-    margin-bottom: 20px;
-}
-
-.scan-text {
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-.scan-text span {
-    display: block;
-    font-size: 2rem;
-}
-
-.qr-code img {
-    width: 150px;
-    height: 150px;
-    margin-top: 15px;
-    border-radius: 5px;
-}
-
-.thank-you {
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-}
-
-/* بخش سمت راست (دسته‌بندی‌ها) */
-.right-section {
-    flex: 1.2;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-right: 20px;
-}
-
-.menu-item {
-    display: flex;
-    align-items: center;
-    border: 1px solid rgba(223, 186, 107, 0.4);
-    border-radius: 8px;
-    padding: 12px 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* پنهان کردن اولیه زیرمجموعه‌ها */
+.submenu-items {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
     background: rgba(223, 186, 107, 0.02);
+    border-left: 1px solid rgba(223, 186, 107, 0.2);
+    border-right: 1px solid rgba(223, 186, 107, 0.2);
+    padding: 0 10px;
 }
 
-.menu-item:hover {
-    background: rgba(223, 186, 107, 0.15);
-    border-color: #dfba6b;
-    transform: scale(1.02);
+/* فعال شدن دسته اصلی پیتزا */
+.menu-wrapper.active > .submenu-items {
+    max-height: 2000px; /* مقدار بزرگ برای جا شدن تمام زیر منوها */
+    padding: 10px;
+    border-bottom: 1px solid rgba(223, 186, 107, 0.2);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
-.item-icon {
-    font-size: 1.8rem;
-    margin-left: 15px;
+.menu-wrapper.active > .menu-item {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: rgba(223, 186, 107, 0.1);
 }
 
-.item-text {
-    flex-grow: 1;
-    text-align: right;
+.menu-wrapper.active > .menu-item .arrow {
+    transform: rotate(-90deg);
 }
 
-.item-text h3 {
-    font-size: 1rem;
-    margin-bottom: 3px;
+/* استایل دکمه‌های سایز (نیم‌متری، متوسط و...) */
+.size-wrapper {
+    margin-bottom: 5px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(223, 186, 107, 0.15);
+}
+
+.size-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: rgba(223, 186, 107, 0.04);
     color: #dfba6b;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.item-text p {
+.size-header:hover {
+    background: rgba(223, 186, 107, 0.08);
+}
+
+.size-arrow {
     font-size: 0.75rem;
-    color: #bfa365;
-}
-
-.arrow {
-    font-size: 0.8rem;
+    transition: transform 0.3s;
     opacity: 0.7;
 }
 
-/* کدهای واکنش‌گرایی مخصوص موبایل */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-    
-    .menu-container {
-        flex-direction: column;
-        padding: 20px 15px;
-    }
-    
-    .left-section {
-        border-left: none;
-        border-bottom: 1px solid rgba(223, 186, 107, 0.3);
-        padding-left: 0;
-        padding-bottom: 25px;
-        margin-bottom: 25px;
-        width: 100%;
-    }
-    
-    .right-section {
-        padding-right: 0;
-        width: 100%;
-    }
+/* محتوای هر سایز (لیست غذاها) */
+.size-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: #080808;
+    padding: 0 10px;
+}
 
-    .menu-item {
-        padding: 10px;
-    }
+/* باز شدن لیست غذاهای هر سایز */
+.size-wrapper.open .size-content {
+    max-height: 1200px;
+    padding: 5px 10px;
+}
+
+.size-wrapper.open .size-header {
+    background: rgba(223, 186, 107, 0.15);
+    color: #fff;
+}
+
+.size-wrapper.open .size-arrow {
+    transform: rotate(-90deg);
+}
+
+/* استایل هر آیتم غذا */
+.sub-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5px;
+    border-bottom: 1px solid rgba(223, 186, 107, 0.08);
+}
+
+.sub-item:last-child {
+    border-bottom: none;
+}
+
+.sub-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: right;
+    max-width: 75%;
+}
+
+.sub-title {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.sub-details {
+    color: #a3906b;
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.sub-price {
+    color: #dfba6b;
+    font-weight: bold;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* انیمیشن چرخش فلش منوی اصلی */
+.menu-item .arrow {
+    transition: transform 0.3s ease;
 }
