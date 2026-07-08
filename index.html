@@ -30,13 +30,348 @@
 
         <div class="right-section">
             
-            <div class="menu-item">
-                <div class="item-icon">🍕</div>
-                <div class="item-text">
-                    <h3>PIZZA / پیتزا</h3>
-                    <p>انواع پیتزاهای ایتالیایی با بهترین مواد اولیه</p>
+            <div class="menu-wrapper main-category">
+                <div class="menu-item" onclick="toggleMainMenu(this)">
+                    <div class="item-icon">🍕</div>
+                    <div class="item-text">
+                        <h3>PIZZA / پیتزا</h3>
+                        <p>انواع پیتزاهای لذیذ در سایزها و سبک‌های مختلف</p>
+                    </div>
+                    <span class="arrow">◀</span>
                 </div>
-                <span class="arrow">◀</span>
+                
+                <div class="submenu-items pizza-sizes">
+                    
+                    <div class="size-wrapper">
+                        <div class="size-header" onclick="toggleSizeMenu(this)">
+                            <span>📐 پیتزا نیم متری</span>
+                            <span class="size-arrow">◀</span>
+                        </div>
+                        <div class="size-content">
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مخصوص سر آشپز مادوتا</span>
+                                    <span class="sub-details">فلفل دلمه + زیتون + گوجه فرنگی + پنیر + سس مخصوص + ژامبون گوشت + مرغ و گوشت + سوجوک + قارچ</span>
+                                </div>
+                                <span class="sub-price">۹۹۰,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مخصوص مادوتا</span>
+                                    <span class="sub-details">گوشت و مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۸۹۰,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا رست بیف</span>
+                                    <span class="sub-details">رست بیف + پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۸۹۰,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا بیف</span>
+                                    <span class="sub-details">پنیر + قارچ + گوشت + سس مخصوص + فلفل دلمه + گوجه فرنگی + زیتون + خلال</span>
+                                </div>
+                                <span class="sub-price">۸۹۰,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا گوشت</span>
+                                    <span class="sub-details">پنیر + قارچ + گوشت + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۷۷۰,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مرغ</span>
+                                    <span class="sub-details">گوشت + مرغ + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۷۳۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا گوشت و مرغ</span>
+                                    <span class="sub-details">گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۸۱۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا چهار فصل</span>
+                                    <span class="sub-details">گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۸۹۰,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا سوجوق</span>
+                                    <span class="sub-details">پنیر + فلفل دلمه + زیتون + گوجه فرنگی + سوچوق و سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۸۷۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا پپرونی</span>
+                                    <span class="sub-details">پنیر + قارچ + پپرونی + فلفل دلمه + گوجه فرنگی + زیتون + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۸۷۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مکزیکی</span>
+                                    <span class="sub-details">پنیر + قارچ + پپرونی + پودر پاپریکا + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۸۷۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مخلوط</span>
+                                    <span class="sub-details">کالباس + پنیر + قارچ + فلفل دلمه + سوسیس + گوجه فرنگی</span>
+                                </div>
+                                <span class="sub-price">۴۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا سبزیجات</span>
+                                    <span class="sub-details">پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + پودر نخود فرنگی + جعفری + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۴۹۹,۰۰۰ ت</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="size-wrapper">
+                        <div class="size-header" onclick="toggleSizeMenu(this)">
+                            <span>🍕 پیتزا متوسط</span>
+                            <span class="size-arrow">◀</span>
+                        </div>
+                        <div class="size-content">
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مخصوص سر آشپز مادوتا</span>
+                                    <span class="sub-details">فلفل دلمه + زیتون + گوجه فرنگی + پنیر + سس مخصوص + ژامبون گوشت + مرغ و گوشت + سوجوک + قارچ</span>
+                                </div>
+                                <span class="sub-price">۶۵۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مخصوص مادوتا</span>
+                                    <span class="sub-details">گوشت و مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۵۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا رست بیف</span>
+                                    <span class="sub-details">رست بیف + پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۵۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا بیف</span>
+                                    <span class="sub-details">پنیر + قارچ + گوشت + سس مخصوص + فلفل دلمه + گوجه فرنگی + زیتون + خلال</span>
+                                </div>
+                                <span class="sub-price">۵۵۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا گوشت</span>
+                                    <span class="sub-details">پنیر + قارچ + گوشت + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۵۴۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مرغ</span>
+                                    <span class="sub-details">گوشت + مرغ + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۵۳۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا گوشت و مرغ</span>
+                                    <span class="sub-details">گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۵۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا چهار فصل</span>
+                                    <span class="sub-details">گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۵۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا سوجوق</span>
+                                    <span class="sub-details">پنیر + فلفل دلمه + زیتون + گوجه فرنگی + سوچوق و سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۵۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا پپرونی</span>
+                                    <span class="sub-details">پنیر + قارچ + پپرونی + فلفل دلمه + گوجه فرنگی + زیتون + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۵۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مکزیکی</span>
+                                    <span class="sub-details">پنیر + قارچ + پپرونی + پودر پاپریکا + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۵۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مخلوط</span>
+                                    <span class="sub-details">کالباس + پنیر + قارچ + فلفل دلمه + سوسیس + گوجه فرنگی</span>
+                                </div>
+                                <span class="sub-price">۳۷۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا سبزیجات</span>
+                                    <span class="sub-details">پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + پودر نخود فرنگی + جعفری + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۳۷۹,۰۰۰ ت</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="size-wrapper">
+                        <div class="size-header" onclick="toggleSizeMenu(this)">
+                            <span>👶 پیتزا مینی</span>
+                            <span class="size-arrow">◀</span>
+                        </div>
+                        <div class="size-content">
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مخصوص سر آشپز مادوتا</span>
+                                    <span class="sub-details">فلفل دلمه + زیتون + گوجه فرنگی + پنیر + سس مخصوص + ژامبون گوشت + مرغ و گوشت + سوجوک + قارچ</span>
+                                </div>
+                                <span class="sub-price">۴۳۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مخصوص مادوتا</span>
+                                    <span class="sub-details">گوشت و مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۴۳۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا رست بیف</span>
+                                    <span class="sub-details">رست بیف + پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۴۳۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا بیف</span>
+                                    <span class="sub-details">پنیر + قارچ + گوشت + سس مخصوص + فلفل دلمه + گوجه فرنگی + زیتون + خلال</span>
+                                </div>
+                                <span class="sub-price">۳۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا گوشت</span>
+                                    <span class="sub-details">پنیر + قارچ + گوشت + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۳۸۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مرغ</span>
+                                    <span class="sub-details">گوشت + مرغ + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۳۷۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا گوشت و مرغ</span>
+                                    <span class="sub-details">گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۳۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا چهار فصل</span>
+                                    <span class="sub-details">گوشت + مرغ + کالباس + پنیر + فلفل دلمه + گوجه فرنگی + زیتون</span>
+                                </div>
+                                <span class="sub-price">۳۸۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا سوجوق</span>
+                                    <span class="sub-details">پنیر + فلفل دلمه + زیتون + گوجه فرنگی + سوچوق و سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۳۸۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا پپرونی</span>
+                                    <span class="sub-details">پنیر + قارچ + پپرونی + فلفل دلمه + گوجه فرنگی + زیتون + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۳۸۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مکزیکی</span>
+                                    <span class="sub-details">پنیر + قارچ + پپرونی + پودر پاپریکا + فلفل دلمه + زیتون + گوجه فرنگی + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۳۸۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا مخلوط</span>
+                                    <span class="sub-details">کالباس + پنیر + قارچ + فلفل دلمه + سوسیس + گوجه فرنگی</span>
+                                </div>
+                                <span class="sub-price">۲۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info">
+                                    <span class="sub-title">پیتزا سبزیجات</span>
+                                    <span class="sub-details">پنیر + قارچ + فلفل دلمه + زیتون + گوجه فرنگی + پودر نخود فرنگی + جعفری + سس مخصوص</span>
+                                </div>
+                                <span class="sub-price">۲۹۹,۰۰۰ ت</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="size-wrapper">
+                        <div class="size-header" onclick="toggleSizeMenu(this)">
+                            <span>🇮🇹 پیتزا ایتالیایی</span>
+                            <span class="size-arrow">◀</span>
+                        </div>
+                        <div class="size-content">
+                            <div class="sub-item">
+                                <div class="sub-info"><span class="sub-title">پیتزا استیک</span></div>
+                                <span class="sub-price">۸۱۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info"><span class="sub-title">پیتزا بیکن</span></div>
+                                <span class="sub-price">۷۱۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info"><span class="sub-title">پیتزا پپرونی</span></div>
+                                <span class="sub-price">۶۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info"><span class="sub-title">پیتزا سوجوق</span></div>
+                                <span class="sub-price">۶۹۹,۰۰۰ ت</span>
+                            </div>
+                            <div class="sub-item">
+                                <div class="sub-info"><span class="sub-title">پیتزا سوخاری</span></div>
+                                <span class="sub-price">۶۹۹,۰۰۰ ت</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="menu-item">
@@ -96,5 +431,35 @@
         </div>
     </div>
 
+    <script>
+        // باز و بسته کردن بخش اصلی پیتزا
+        function toggleMainMenu(element) {
+            const wrapper = element.parentElement;
+            const isOpen = wrapper.classList.contains('active');
+            
+            if (isOpen) {
+                wrapper.classList.remove('active');
+            } else {
+                wrapper.classList.add('active');
+            }
+        }
+
+        // باز و بسته کردن سایزهای پیتزا (نیم متری، متوسط و...)
+        function toggleSizeMenu(element) {
+            const wrapper = element.parentElement;
+            const isOpen = wrapper.classList.contains('open');
+            
+            // بستن بقیه سایزها برای خلوت شدن منو
+            const allSizes = wrapper.parentElement.querySelectorAll('.size-wrapper');
+            allSizes.forEach(item => item.classList.remove('open'));
+
+            if (!isOpen) {
+                wrapper.classList.add('open');
+            }
+            
+            // جلوگیری از بسته شدن منوی اصلی با کلیک روی زیرمنوها
+            event.stopPropagation();
+        }
+    </script>
 </body>
 </html>
