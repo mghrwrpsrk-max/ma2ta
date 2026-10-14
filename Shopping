@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه لوازم الکترونیکی کوانتوم</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Tahoma, sans-serif;
+        }
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        /* هدر سایت */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #00f0ff;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        nav ul li a {
+            color: #b0c4de;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #00f0ff;
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+        }
+        /* محتوای اصلی */
+        .main-container {
+            max-width: 1200px;
+            margin: 120px auto 50px auto;
+            padding: 20px;
+        }
+        /* بنر اصلی */
+        .hero-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.05), rgba(120, 0, 255, 0.05));
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+            margin-bottom: 30px;
+        }
+        .hero-text h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .hero-text p {
+            color: #8a99ad;
+            margin-bottom: 25px;
+        }
+        .btn-neon {
+            background: transparent;
+            color: #00f0ff;
+            border: 2px solid #00f0ff;
+            padding: 10px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+        }
+        .btn-neon:hover {
+            background: #00f0ff;
+            color: #0b0f19;
+            box-shadow: 0 0 20px #00f0ff;
+        }
+        /* گرید محصولات */
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+            position: relative;
+        }
+        .card:hover {
+            border-color: #7800ff;
+            box-shadow: 0 0 15px rgba(120, 0, 255, 0.4);
+            transform: translateY(-5px);
+        }
+        .card img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .card .price {
+            color: #00f0ff;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- هدر سایت -->
+    <header>
+        <div class="logo">QUANTUM</div>
+        <nav>
+            <ul>
+                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="#">گوشی هوشمند</a></li>
+                <li><a href="#">لپ‌تاپ</a></li>
+                <li><a href="#">صوتی و تصویری</a></li>
+                <li><a href="#">پشتیبانی</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- بخش محتوا -->
+    <div class="main-container">
+        <!-- بنر بالا -->
+        <div class="hero-banner">
+            <div class="hero-text">
+                <h1>QUANTUM X: آینده اینجاست</h1>
+                <p>پیشرفته‌ترین گجت‌ها و لوازم الکترونیکی با طراحی مدرن و کیفیت بی‌نظیر</p>
+                <button class="btn-neon">مشاهده محصولات</button>
+            </div>
+            <div class="hero-image">
+                <div style="width: 250px; height: 150px; background: rgba(0,240,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #00f0ff; border: 1px dashed #00f0ff;">تصویر بنر سه‌بعدی</div>
+            </div>
+        </div>
+
+        <!-- کارت‌های محصولات -->
+        <div class="grid-section">
+            <div class="card">
+                <div style="height: 120px; background: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 10px;">عکسی از محصول</div>
+                <h3>کوانتوم‌بوک پرو</h3>
+                <div class="price">۷۸,۵۰۰,۰۰۰ تومان</div>
+                <button class="btn-neon" style="padding: 5px 15px; font-size: 12px;">افزودن به سبد خرید</button>
+            </div>
+            <div class="card">
+                <div style="height: 120px; background: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 10px;">عکسی از محصول</div>
+                <h3>هدست واقعیت مجازی</h3>
+                <div class="price">۴۸,۹۰۰,۰۰۰ تومان</div>
+                <button class="btn-neon" style="padding: 5px 15px; font-size: 12px;">افزودن به سبد خرید</button>
+            </div>
+            <div class="card">
+                <div style="height: 120px; background: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 10px;">عکسی از محصول</div>
+                <h3>کنسول بازی نسل جدید</h3>
+                <div class="price">۳۵,۲۰۰,۰۰۰ تومان</div>
+                <button class="btn-neon" style="padding: 5px 15px; font-size: 12px;">افزودن به سبد خرید</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
